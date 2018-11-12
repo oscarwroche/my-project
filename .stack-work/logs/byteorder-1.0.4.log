@@ -1,0 +1,7 @@
+Configuring byteorder-1.0.4...
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+Preprocessing library for byteorder-1.0.4..
+Building library for byteorder-1.0.4..
+[1 of 1] Compiling System.ByteOrder ( System/ByteOrder.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/System/ByteOrder.o )
+Installing library in /Users/oscarroche/.stack/snapshots/x86_64-osx/lts-12.17/8.4.4/lib/x86_64-osx-ghc-8.4.4/byteorder-1.0.4-JGHrMy8StI888DOmmSVbRy
+Registering library for byteorder-1.0.4..

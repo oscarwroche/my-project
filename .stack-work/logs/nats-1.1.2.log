@@ -1,0 +1,6 @@
+Configuring nats-1.1.2...
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+Preprocessing library for nats-1.1.2..
+Building library for nats-1.1.2..
+Installing library in /Users/oscarroche/.stack/snapshots/x86_64-osx/lts-12.17/8.4.4/lib/x86_64-osx-ghc-8.4.4/nats-1.1.2-1IJUekZt6ps5IWVCKMBPeK
+Registering library for nats-1.1.2..

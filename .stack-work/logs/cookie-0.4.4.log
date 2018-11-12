@@ -1,0 +1,7 @@
+Configuring cookie-0.4.4...
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+Preprocessing library for cookie-0.4.4..
+Building library for cookie-0.4.4..
+[1 of 1] Compiling Web.Cookie       ( Web/Cookie.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Web/Cookie.o )
+Installing library in /Users/oscarroche/.stack/snapshots/x86_64-osx/lts-12.17/8.4.4/lib/x86_64-osx-ghc-8.4.4/cookie-0.4.4-8sTl7VBOB5uExrswswtYmw
+Registering library for cookie-0.4.4..

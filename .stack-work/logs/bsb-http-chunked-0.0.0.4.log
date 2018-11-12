@@ -1,0 +1,7 @@
+Configuring bsb-http-chunked-0.0.0.4...
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+Preprocessing library for bsb-http-chunked-0.0.0.4..
+Building library for bsb-http-chunked-0.0.0.4..
+[1 of 1] Compiling Data.ByteString.Builder.HTTP.Chunked ( Data/ByteString/Builder/HTTP/Chunked.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Data/ByteString/Builder/HTTP/Chunked.o )
+Installing library in /Users/oscarroche/.stack/snapshots/x86_64-osx/lts-12.17/8.4.4/lib/x86_64-osx-ghc-8.4.4/bsb-http-chunked-0.0.0.4-APmSGNCvcZO9g0Zx1dmgPc
+Registering library for bsb-http-chunked-0.0.0.4..

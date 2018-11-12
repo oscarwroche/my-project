@@ -1,0 +1,6 @@
+Configuring fail-4.9.0.0...
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+Preprocessing library for fail-4.9.0.0..
+Building library for fail-4.9.0.0..
+Installing library in /Users/oscarroche/.stack/snapshots/x86_64-osx/lts-12.17/8.4.4/lib/x86_64-osx-ghc-8.4.4/fail-4.9.0.0-BAHmj60kS5K7NVhhKpm9J5
+Registering library for fail-4.9.0.0..

@@ -1,0 +1,9 @@
+Configuring case-insensitive-1.2.0.11...
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+Preprocessing library for case-insensitive-1.2.0.11..
+Building library for case-insensitive-1.2.0.11..
+[1 of 3] Compiling Data.CaseInsensitive.Internal ( Data/CaseInsensitive/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Data/CaseInsensitive/Internal.o )
+[2 of 3] Compiling Data.CaseInsensitive ( Data/CaseInsensitive.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Data/CaseInsensitive.o )
+[3 of 3] Compiling Data.CaseInsensitive.Unsafe ( Data/CaseInsensitive/Unsafe.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Data/CaseInsensitive/Unsafe.o )
+Installing library in /Users/oscarroche/.stack/snapshots/x86_64-osx/lts-12.17/8.4.4/lib/x86_64-osx-ghc-8.4.4/case-insensitive-1.2.0.11-CPrTOvzDNbeGLOzZAUTjaA
+Registering library for case-insensitive-1.2.0.11..
