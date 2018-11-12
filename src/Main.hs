@@ -80,7 +80,8 @@ matchesId id user = userId user == id
 main :: IO ()
 main = do
   putStrLn "Starting server ..."
-  scotty 3000 $ do
+  port <- read <$> getEnv "PORT"
+  scotty port $ do
     get "/hello/:name" $ do
       name <- param "name"
       text ("hello " <> name <> "!")
@@ -88,4 +89,4 @@ main = do
       json allUsers
     get "/users/:id" $ do
       id <- param "id"
-      json $ filter (matchesId id) allUsers 
+      json $ filter (matchesId id) allUsers
