@@ -7,7 +7,7 @@ import System.IO (readFile)
 import Data.Time (getCurrentTime)
 import Data.Aeson (encode, FromJSON, ToJSON)
 import Control.Monad (replicateM)
-import System.Environment (getArgs)
+import System.Environment (getArgs, getEnv)
 import Web.Scotty
 import Data.Monoid ((<>))
 import GHC.Generics
