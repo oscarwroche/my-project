@@ -1,29 +1,34 @@
 
 ==================== FINAL INTERFACE ====================
-2018-11-09 13:46:36.410646 UTC
+2018-11-13 17:30:02.115623 UTC
 
-interface main:Main 8044
-  interface hash: 675e3ed5b61880f81cfbad7f0f369037
-  ABI hash: d49ad57dffe29d3c576484e75163c946
-  export-list hash: a814f349abde79af59aacd2c7c538767
-  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
-  flag hash: 1858775361564df60dbaec203f6b867e
+interface main:Main [family instance module] 8044
+  interface hash: 76f2e42efafa4179b00e8c48e04d8cb0
+  ABI hash: 34e8b8fd491871112e817d32d8f98cca
+  export-list hash: ba6c1bd3aae7e73a794f871eddb55a3a
+  orphan hash: 88ff6429acb1ff8e8a5de3ec3d632b65
+  flag hash: 04e35ef90e612175532c0ad4d211a515
   opt_hash: 14e536840aca4e889cad654e6f9b79c1
   hpc_hash: 93b885adfe0da089cdf634904fd59f71
   sig of: Nothing
   used TH splices: False
   where
 exports:
+  Main.allUsers
+  Main.bob
   Main.exercise
   Main.greet
+  Main.jenny
   Main.main
   Main.main0
   Main.main1
+  Main.matchesId
   Main.maybeMonad
   Main.numbers
   Main.printConfig
   Main.printNumbers
   Main.printTime
+  Main.User{Main.User userId userName}
 module dependencies:
 package dependencies: aeson-1.3.1.1 appar-0.1.4 array-0.5.2.0
                       async-2.2.1 attoparsec-0.13.2.2 auto-update-0.1.4 base-4.11.1.0
@@ -100,19 +105,1302 @@ family instance modules: aeson-1.3.1.1:Data.Aeson.Types.Internal
                          vector-0.12.0.1:Data.Vector.Unboxed
                          vector-0.12.0.1:Data.Vector.Unboxed.Base
 import  -/  aeson-1.3.1.1:Data.Aeson eaae3b07ec740ee7e47dbaa91ff71c8b
+import  -/  aeson-1.3.1.1:Data.Aeson.Types.FromJSON c131b243aea68f6328f9cae8a1f89199
+import  -/  aeson-1.3.1.1:Data.Aeson.Types.ToJSON ad6d0f49448317de4efb0604999b4445
 import  -/  base-4.11.1.0:Control.Monad c5f960c67d822497578bffbd3e4c01cf
+import  -/  base-4.11.1.0:Data.Functor f522c3501272159820fd6f242510732f
+import  -/  base-4.11.1.0:Data.Monoid c40cd435d79b84293ce5503253ee6d44
 import  -/  base-4.11.1.0:Data.Traversable 7ad4edb9184ea1ae8e73f6b94f115c8c
 import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.Generics 4d1469b3e29804a05a1be33d11accff6
 import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
 import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
 import  -/  base-4.11.1.0:GHC.Show 73be67392447c974f19c3befd83c46c0
 import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
 import  -/  base-4.11.1.0:System.Environment 06420d98d10ee04b8dda9c0d88032c55
 import  -/  base-4.11.1.0:System.IO e02b6055b5362a3eac04f83991602a53
+import  -/  base-4.11.1.0:Text.Read 6c02630607b565ffcb34e8127673989b
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
 import  -/  ghc-prim-0.5.2.0:GHC.Types d9b3023de7feae4a5308d643da5543f7
 import  -/  scotty-0.11.2:Web.Scotty 256ededf8776e192bea732b3552e6378
 import  -/  time-1.8.0.2:Data.Time f61eb3fcde68af41067af47b14b52c30
 import  -/  time-1.8.0.2:Data.Time.Clock.POSIX 3faf40912a67189fa5f3b8252eca7637
+e082c4be356293409e1386f80b501131
+  $fFromJSONUser :: Data.Aeson.Types.FromJSON.FromJSON Main.User
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.User
+                  Main.$fFromJSONUser_$cparseJSON
+                  Main.$fFromJSONUser_$cparseJSONList -}
+e08c349b57899f83a4ac386d0fb8547c
+  $fFromJSONUser1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (", encountered "#) -}
+f4bd0e05b3af664ba48fc1d2b70f3c66
+  $fFromJSONUser10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$fFromJSONUser11) -}
+828e7fc81d16a1eb9a20c70b2529f915
+  $fFromJSONUser11 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("userId"#) -}
+7db2dd05c2ea74aa33605c50016033a7
+  $fFromJSONUser2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("[a]"#) -}
+b404a5c8a0b04dae60dbc02d85d31c20
+  $fFromJSONUser3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("expected "#) -}
+4874897ebc1924be825944abf60819e0
+  $fFromJSONUser4 :: Data.Aeson.Types.Internal.Options
+  {- Strictness: m,
+     Unfolding: (Data.Aeson.Types.Internal.Options
+                   (GHC.Base.id @ GHC.Base.String)
+                   (GHC.Base.id @ GHC.Base.String)
+                   GHC.Types.True
+                   GHC.Types.False
+                   Data.Aeson.Types.Internal.defaultTaggedObject
+                   GHC.Types.False
+                   GHC.Types.False) -}
+765794aa687bb8f6b152e9c14fcc04a9
+  $fFromJSONUser5 ::
+    Data.Aeson.Types.Internal.Options
+    -> Data.Aeson.Types.FromJSON.FromArgs
+         Data.Aeson.Types.Generic.Zero a2
+    -> Data.Aeson.Types.Internal.Object
+    -> Data.Aeson.Types.Internal.Parser
+         ((GHC.Generics.:*:)
+            (GHC.Generics.M1
+               GHC.Generics.S
+               ('GHC.Generics.MetaSel
+                  ('GHC.Base.Just "userId")
+                  'GHC.Generics.NoSourceUnpackedness
+                  'GHC.Generics.NoSourceStrictness
+                  'GHC.Generics.DecidedLazy)
+               (GHC.Generics.Rec0 GHC.Types.Int))
+            (GHC.Generics.M1
+               GHC.Generics.S
+               ('GHC.Generics.MetaSel
+                  ('GHC.Base.Just "userName")
+                  'GHC.Generics.NoSourceUnpackedness
+                  'GHC.Generics.NoSourceStrictness
+                  'GHC.Generics.DecidedLazy)
+               (GHC.Generics.Rec0 GHC.Base.String))
+            a2)
+  {- Arity: 3, Strictness: <L,U(U,U,U,U,U,U,U)><L,U><L,U>,
+     Unfolding: (\ @ a2
+                   (opts :: Data.Aeson.Types.Internal.Options)
+                   (fargs :: Data.Aeson.Types.FromJSON.FromArgs
+                               Data.Aeson.Types.Generic.Zero a2)
+                   (obj :: Data.Aeson.Types.Internal.Object) ->
+                 let {
+                   m :: Data.Aeson.Types.Internal.Parser
+                          (GHC.Generics.M1
+                             GHC.Generics.S
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "userId")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.Rec0 GHC.Types.Int)
+                             a2)
+                   = Data.Aeson.Types.FromJSON.$fFromRecordarityM11_$cparseRecord
+                       @ ('GHC.Generics.MetaSel
+                            ('GHC.Base.Just "userId")
+                            'GHC.Generics.NoSourceUnpackedness
+                            'GHC.Generics.NoSourceStrictness
+                            'GHC.Generics.DecidedLazy)
+                       @ Data.Aeson.Types.Generic.Zero
+                       @ (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+                       Main.$fFromJSONUser_$s$fSelectorMetaMetaSel1
+                       Main.$fFromJSONUser9
+                         `cast`
+                       (Sym (Data.Aeson.Types.FromJSON.N:GFromJSON[0]
+                                 <Data.Aeson.Types.Generic.Zero>_N
+                                 <GHC.Generics.K1 GHC.Generics.R GHC.Types.Int>_N))
+                       @ a2
+                       opts
+                       fargs
+                       obj
+                 } in
+                 let {
+                   e :: Data.Aeson.Types.Internal.Parser
+                          (GHC.Generics.M1
+                             GHC.Generics.S
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "userName")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.Rec0 GHC.Base.String)
+                             a2)
+                   = Data.Aeson.Types.FromJSON.$fFromRecordarityM11_$cparseRecord
+                       @ ('GHC.Generics.MetaSel
+                            ('GHC.Base.Just "userName")
+                            'GHC.Generics.NoSourceUnpackedness
+                            'GHC.Generics.NoSourceStrictness
+                            'GHC.Generics.DecidedLazy)
+                       @ Data.Aeson.Types.Generic.Zero
+                       @ (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
+                       Main.$fFromJSONUser_$s$fSelectorMetaMetaSel
+                       Main.$fFromJSONUser6
+                         `cast`
+                       (Sym (Data.Aeson.Types.FromJSON.N:GFromJSON[0]
+                                 <Data.Aeson.Types.Generic.Zero>_N
+                                 <GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char]>_N))
+                       @ a2
+                       opts
+                       fargs
+                       obj
+                 } in
+                 (\ @ f4 :: * -> *
+                    @ r
+                    (path :: Data.Aeson.Types.Internal.JSONPath)
+                    (kf :: Data.Aeson.Types.Internal.Failure f4 r)
+                    (ks :: Data.Aeson.Types.Internal.Success
+                             ((GHC.Generics.:*:)
+                                (GHC.Generics.M1
+                                   GHC.Generics.S
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "userId")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 GHC.Types.Int))
+                                (GHC.Generics.M1
+                                   GHC.Generics.S
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "userName")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 GHC.Base.String))
+                                a2)
+                             f4
+                             r) ->
+                  m `cast`
+                  (Data.Aeson.Types.Internal.N:Parser[0]
+                       <GHC.Generics.M1
+                          GHC.Generics.S
+                          ('GHC.Generics.MetaSel
+                             ('GHC.Base.Just "userId")
+                             'GHC.Generics.NoSourceUnpackedness
+                             'GHC.Generics.NoSourceStrictness
+                             'GHC.Generics.DecidedLazy)
+                          (GHC.Generics.Rec0 GHC.Types.Int)
+                          a2>_R)
+                    @ f4
+                    @ r
+                    path
+                    kf
+                    (\ (a3 :: GHC.Generics.M1
+                                GHC.Generics.S
+                                ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "userId")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0 GHC.Types.Int)
+                                a2) ->
+                     e `cast`
+                     (Data.Aeson.Types.Internal.N:Parser[0]
+                          <GHC.Generics.M1
+                             GHC.Generics.S
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "userName")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.Rec0 GHC.Base.String)
+                             a2>_R)
+                       @ f4
+                       @ r
+                       path
+                       kf
+                       (\ (a4 :: GHC.Generics.M1
+                                   GHC.Generics.S
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "userName")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 GHC.Base.String)
+                                   a2) ->
+                        ks
+                          (GHC.Generics.:*:
+                             @ *
+                             @ (GHC.Generics.M1
+                                  GHC.Generics.S
+                                  ('GHC.Generics.MetaSel
+                                     ('GHC.Base.Just "userId")
+                                     'GHC.Generics.NoSourceUnpackedness
+                                     'GHC.Generics.NoSourceStrictness
+                                     'GHC.Generics.DecidedLazy)
+                                  (GHC.Generics.Rec0 GHC.Types.Int))
+                             @ (GHC.Generics.M1
+                                  GHC.Generics.S
+                                  ('GHC.Generics.MetaSel
+                                     ('GHC.Base.Just "userName")
+                                     'GHC.Generics.NoSourceUnpackedness
+                                     'GHC.Generics.NoSourceStrictness
+                                     'GHC.Generics.DecidedLazy)
+                                  (GHC.Generics.Rec0 GHC.Base.String))
+                             @ a2
+                             a3
+                             a4))))
+                   `cast`
+                 (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                           <(GHC.Generics.:*:)
+                              (GHC.Generics.M1
+                                 GHC.Generics.S
+                                 ('GHC.Generics.MetaSel
+                                    ('GHC.Base.Just "userId")
+                                    'GHC.Generics.NoSourceUnpackedness
+                                    'GHC.Generics.NoSourceStrictness
+                                    'GHC.Generics.DecidedLazy)
+                                 (GHC.Generics.Rec0 GHC.Types.Int))
+                              (GHC.Generics.M1
+                                 GHC.Generics.S
+                                 ('GHC.Generics.MetaSel
+                                    ('GHC.Base.Just "userName")
+                                    'GHC.Generics.NoSourceUnpackedness
+                                    'GHC.Generics.NoSourceStrictness
+                                    'GHC.Generics.DecidedLazy)
+                                 (GHC.Generics.Rec0 GHC.Base.String))
+                              a2>_R))) -}
+693841c82a6f349a375a8688327a0154
+  $fFromJSONUser6 ::
+    Data.Aeson.Types.Internal.Options
+    -> Data.Aeson.Types.FromJSON.FromArgs
+         Data.Aeson.Types.Generic.Zero a1
+    -> Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser
+         (GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1)
+  {- Arity: 3, Strictness: <L,A><L,A><L,U>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ a2
+                   (w1 :: Data.Aeson.Types.Internal.Options)
+                   (w4 :: Data.Aeson.Types.FromJSON.FromArgs
+                            Data.Aeson.Types.Generic.Zero a2)
+                   (w3 :: Data.Aeson.Types.Internal.Value) ->
+                 Data.Aeson.Types.FromJSON.$w$cgParseJSON2
+                   @ [GHC.Types.Char]
+                   @ Data.Aeson.Types.Generic.Zero
+                   @ GHC.Generics.R
+                   Main.$fFromJSONUser_$s$fFromJSON[]
+                   @ a2
+                   w3) -}
+0b45627dbaef78886e8ec3d7835df2bb
+  $fFromJSONUser7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$fFromJSONUser8) -}
+98d6fad690ba490dbe9522eae2c2107f
+  $fFromJSONUser8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("userName"#) -}
+51c536281975bbabc7cdec45f6264ea4
+  $fFromJSONUser9 ::
+    Data.Aeson.Types.Internal.Options
+    -> Data.Aeson.Types.FromJSON.FromArgs
+         Data.Aeson.Types.Generic.Zero a1
+    -> Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser
+         (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int a1)
+  {- Arity: 3, Strictness: <L,A><L,A><L,U>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ a2
+                   (w1 :: Data.Aeson.Types.Internal.Options)
+                   (w4 :: Data.Aeson.Types.FromJSON.FromArgs
+                            Data.Aeson.Types.Generic.Zero a2)
+                   (w3 :: Data.Aeson.Types.Internal.Value) ->
+                 Data.Aeson.Types.FromJSON.$w$cgParseJSON2
+                   @ GHC.Types.Int
+                   @ Data.Aeson.Types.Generic.Zero
+                   @ GHC.Generics.R
+                   Data.Aeson.Types.FromJSON.$fFromJSONInt
+                   @ a2
+                   w3) -}
+e082c4be356293409e1386f80b501131
+  $fFromJSONUser_$cparseJSON ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser Main.User
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (x :: Data.Aeson.Types.Internal.Value) ->
+                 let {
+                   m :: Data.Aeson.Types.Internal.Parser
+                          ((GHC.Generics.:*:)
+                             (GHC.Generics.S1
+                                ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "userId")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0 GHC.Types.Int))
+                             (GHC.Generics.S1
+                                ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "userName")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0 GHC.Base.String))
+                             GHC.Types.Any)
+                   = case x of wild {
+                       DEFAULT
+                       -> let {
+                            msg19 :: GHC.Base.String
+                            = GHC.CString.unpackAppendCString#
+                                Data.Aeson.Types.FromJSON.typeMismatch4
+                                (GHC.Base.++
+                                   @ GHC.Types.Char
+                                   Data.Aeson.Types.FromJSON.$fConsFromJSON'TYPEarityfTrue1
+                                   (GHC.CString.unpackAppendCString#
+                                      Data.Aeson.Types.FromJSON.typeMismatch3
+                                      (case wild of wild1 {
+                                         Data.Aeson.Types.Internal.Array ds
+                                         -> Data.Aeson.Types.FromJSON.typeMismatch1
+                                         Data.Aeson.Types.Internal.String ds
+                                         -> Data.Aeson.Types.FromJSON.$dmliftParseJSONList8
+                                         Data.Aeson.Types.Internal.Number ds
+                                         -> Data.Aeson.Types.FromJSON.$dmliftParseJSONList6
+                                         Data.Aeson.Types.Internal.Bool ds
+                                         -> Data.Aeson.Types.FromJSON.$dmliftParseJSONList4
+                                         Data.Aeson.Types.Internal.Null
+                                         -> Data.Aeson.Types.FromJSON.$dmliftParseJSONList1 })))
+                          } in
+                          (\ @ f4 :: * -> *
+                             @ r
+                             (path :: Data.Aeson.Types.Internal.JSONPath)
+                             (kf :: Data.Aeson.Types.Internal.Failure f4 r)[OneShot]
+                             (_ks :: Data.Aeson.Types.Internal.Success
+                                       ((GHC.Generics.:*:)
+                                          (GHC.Generics.S1
+                                             ('GHC.Generics.MetaSel
+                                                ('GHC.Base.Just "userId")
+                                                'GHC.Generics.NoSourceUnpackedness
+                                                'GHC.Generics.NoSourceStrictness
+                                                'GHC.Generics.DecidedLazy)
+                                             (GHC.Generics.Rec0 GHC.Types.Int))
+                                          (GHC.Generics.S1
+                                             ('GHC.Generics.MetaSel
+                                                ('GHC.Base.Just "userName")
+                                                'GHC.Generics.NoSourceUnpackedness
+                                                'GHC.Generics.NoSourceStrictness
+                                                'GHC.Generics.DecidedLazy)
+                                             (GHC.Generics.Rec0 GHC.Base.String))
+                                          GHC.Types.Any)
+                                       f4
+                                       r)[OneShot] ->
+                           kf
+                             (GHC.List.reverse @ Data.Aeson.Types.Internal.JSONPathElement path)
+                             msg19)
+                            `cast`
+                          (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                                    <(GHC.Generics.:*:)
+                                       (GHC.Generics.S1
+                                          ('GHC.Generics.MetaSel
+                                             ('GHC.Base.Just "userId")
+                                             'GHC.Generics.NoSourceUnpackedness
+                                             'GHC.Generics.NoSourceStrictness
+                                             'GHC.Generics.DecidedLazy)
+                                          (GHC.Generics.Rec0 GHC.Types.Int))
+                                       (GHC.Generics.S1
+                                          ('GHC.Generics.MetaSel
+                                             ('GHC.Base.Just "userName")
+                                             'GHC.Generics.NoSourceUnpackedness
+                                             'GHC.Generics.NoSourceStrictness
+                                             'GHC.Generics.DecidedLazy)
+                                          (GHC.Generics.Rec0 GHC.Base.String))
+                                       GHC.Types.Any>_R))
+                       Data.Aeson.Types.Internal.Object obj
+                       -> Main.$fFromJSONUser5
+                            @ GHC.Types.Any
+                            Main.$fFromJSONUser4
+                            (Data.Aeson.Types.FromJSON.$WNoFromArgs @ GHC.Types.Any)
+                            obj }
+                 } in
+                 (\ @ f5 :: * -> *
+                    @ r
+                    (path :: Data.Aeson.Types.Internal.JSONPath)
+                    (kf :: Data.Aeson.Types.Internal.Failure f5 r)
+                    (ks :: Data.Aeson.Types.Internal.Success Main.User f5 r) ->
+                  m `cast`
+                  (Data.Aeson.Types.Internal.N:Parser[0]
+                       <(GHC.Generics.:*:)
+                          (GHC.Generics.S1
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "userId")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.Rec0 GHC.Types.Int))
+                          (GHC.Generics.S1
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "userName")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.Rec0 GHC.Base.String))
+                          GHC.Types.Any>_R)
+                    @ f5
+                    @ r
+                    path
+                    kf
+                    (\ (a3 :: (GHC.Generics.:*:)
+                                (GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "userId")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 GHC.Types.Int))
+                                (GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "userName")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 GHC.Base.String))
+                                GHC.Types.Any) ->
+                     ks
+                       (case a3 of wild { GHC.Generics.:*: ds ds1 ->
+                        Main.User
+                          ds
+                            `cast`
+                          (GHC.Generics.N:M1[0]
+                               <*>_N
+                               <GHC.Generics.S>_P
+                               <'GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "userId")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy>_P
+                               <GHC.Generics.K1
+                                  GHC.Generics.R
+                                  GHC.Types.Int>_R <GHC.Types.Any>_N ; GHC.Generics.N:K1[0]
+                                                                           <*>_N
+                                                                           <GHC.Generics.R>_P
+                                                                           <GHC.Types.Int>_R
+                                                                           <GHC.Types.Any>_P)
+                          ds1
+                            `cast`
+                          (GHC.Generics.N:M1[0]
+                               <*>_N
+                               <GHC.Generics.S>_P
+                               <'GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "userName")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy>_P
+                               <GHC.Generics.K1
+                                  GHC.Generics.R
+                                  GHC.Base.String>_R <GHC.Types.Any>_N ; GHC.Generics.N:K1[0]
+                                                                             <*>_N
+                                                                             <GHC.Generics.R>_P
+                                                                             <GHC.Base.String>_R
+                                                                             <GHC.Types.Any>_P) })))
+                   `cast`
+                 (Sym (Data.Aeson.Types.Internal.N:Parser[0] <Main.User>_R))) -}
+e082c4be356293409e1386f80b501131
+  $fFromJSONUser_$cparseJSONList ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser [Main.User]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: Data.Aeson.Types.Internal.Value) ->
+                 case ds of wild {
+                   DEFAULT
+                   -> let {
+                        msg19 :: GHC.Base.String
+                        = GHC.CString.unpackAppendCString#
+                            Main.$fFromJSONUser3
+                            (GHC.CString.unpackAppendCString#
+                               Main.$fFromJSONUser2
+                               (GHC.CString.unpackAppendCString#
+                                  Main.$fFromJSONUser1
+                                  (case wild of wild1 {
+                                     Data.Aeson.Types.Internal.Object ds1
+                                     -> Data.Aeson.Types.FromJSON.$dmliftParseJSONList10
+                                     Data.Aeson.Types.Internal.String ds1
+                                     -> Data.Aeson.Types.FromJSON.$dmliftParseJSONList8
+                                     Data.Aeson.Types.Internal.Number ds1
+                                     -> Data.Aeson.Types.FromJSON.$dmliftParseJSONList6
+                                     Data.Aeson.Types.Internal.Bool ds1
+                                     -> Data.Aeson.Types.FromJSON.$dmliftParseJSONList4
+                                     Data.Aeson.Types.Internal.Null
+                                     -> Data.Aeson.Types.FromJSON.$dmliftParseJSONList1 })))
+                      } in
+                      (\ @ f4 :: * -> *
+                         @ r
+                         (path :: Data.Aeson.Types.Internal.JSONPath)
+                         (kf :: Data.Aeson.Types.Internal.Failure f4 r)
+                         (_ks :: Data.Aeson.Types.Internal.Success [Main.User] f4 r) ->
+                       kf
+                         (GHC.List.reverse @ Data.Aeson.Types.Internal.JSONPathElement path)
+                         msg19)
+                        `cast`
+                      (Sym (Data.Aeson.Types.Internal.N:Parser[0] <[Main.User]>_R))
+                   Data.Aeson.Types.Internal.Array a2
+                   -> case a2 of wild1 { Data.Vector.Vector dt dt1 dt2 ->
+                      letrec {
+                        $wgo :: GHC.Prim.Int# -> [Data.Aeson.Types.Internal.Value]
+                          {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                        = \ (ww :: GHC.Prim.Int#) ->
+                          case GHC.Prim.>=# ww dt1 of lwild {
+                            DEFAULT
+                            -> case GHC.Prim.indexArray#
+                                      @ Data.Aeson.Types.Internal.Value
+                                      dt2
+                                      (GHC.Prim.+# dt ww) of ds3 { Unit# ipv ->
+                               GHC.Types.:
+                                 @ Data.Aeson.Types.Internal.Value
+                                 ipv
+                                 ($wgo (GHC.Prim.+# ww 1#)) }
+                            1# -> GHC.Types.[] @ Data.Aeson.Types.Internal.Value }
+                      } in
+                      Main.$fFromJSONUser_go 0# ($wgo 0#) } }) -}
+cd6c38ce9acdf99c0b5a057cd827f4b7
+  $fFromJSONUser_$s$fFromJSON[] ::
+    Data.Aeson.Types.FromJSON.FromJSON [GHC.Types.Char]
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ [GHC.Types.Char]
+                  Data.Aeson.Types.FromJSON.$fFromJSONChar_$cparseJSONList
+                  (Data.Aeson.Types.FromJSON.$fFromJSONKey[]_$cparseJSONList
+                     @ GHC.Types.Char
+                     Data.Aeson.Types.FromJSON.$fFromJSONChar) -}
+0b08353b47a320c0f7174d7095ad03f9
+  $fFromJSONUser_$s$fSelectorMetaMetaSel ::
+    GHC.Generics.Selector
+      ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "userName")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy)
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Generics.Meta
+                  @ ('GHC.Generics.MetaSel
+                       ('GHC.Base.Just "userName")
+                       'GHC.Generics.NoSourceUnpackedness
+                       'GHC.Generics.NoSourceStrictness
+                       'GHC.Generics.DecidedLazy)
+                  (\ @ k
+                     @ t :: GHC.Generics.Meta -> (k -> *) -> k -> *
+                     @ f :: k -> *
+                     @ a :: k
+                     (eta :: t ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "userName")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy) f a) ->
+                   Main.$fFromJSONUser7)
+                  (\ @ k
+                     @ t :: GHC.Generics.Meta -> (k -> *) -> k -> *
+                     @ f :: k -> *
+                     @ a :: k
+                     (ds1 :: t ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "userName")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy) f a) ->
+                   GHC.Generics.NoSourceUnpackedness)
+                  (\ @ k
+                     @ t :: GHC.Generics.Meta -> (k -> *) -> k -> *
+                     @ f :: k -> *
+                     @ a :: k
+                     (ds1 :: t ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "userName")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy) f a) ->
+                   GHC.Generics.NoSourceStrictness)
+                  (\ @ k
+                     @ t :: GHC.Generics.Meta -> (k -> *) -> k -> *
+                     @ f :: k -> *
+                     @ a :: k
+                     (ds1 :: t ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "userName")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy) f a) ->
+                   GHC.Generics.DecidedLazy) -}
+94e3038cd2a775820c101a7e3ad7cadd
+  $fFromJSONUser_$s$fSelectorMetaMetaSel1 ::
+    GHC.Generics.Selector
+      ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "userId")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy)
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Generics.Meta
+                  @ ('GHC.Generics.MetaSel
+                       ('GHC.Base.Just "userId")
+                       'GHC.Generics.NoSourceUnpackedness
+                       'GHC.Generics.NoSourceStrictness
+                       'GHC.Generics.DecidedLazy)
+                  (\ @ k
+                     @ t :: GHC.Generics.Meta -> (k -> *) -> k -> *
+                     @ f :: k -> *
+                     @ a :: k
+                     (eta :: t ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "userId")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy) f a) ->
+                   Main.$fFromJSONUser10)
+                  (\ @ k
+                     @ t :: GHC.Generics.Meta -> (k -> *) -> k -> *
+                     @ f :: k -> *
+                     @ a :: k
+                     (ds1 :: t ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "userId")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy) f a) ->
+                   GHC.Generics.NoSourceUnpackedness)
+                  (\ @ k
+                     @ t :: GHC.Generics.Meta -> (k -> *) -> k -> *
+                     @ f :: k -> *
+                     @ a :: k
+                     (ds1 :: t ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "userId")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy) f a) ->
+                   GHC.Generics.NoSourceStrictness)
+                  (\ @ k
+                     @ t :: GHC.Generics.Meta -> (k -> *) -> k -> *
+                     @ f :: k -> *
+                     @ a :: k
+                     (ds1 :: t ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "userId")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy) f a) ->
+                   GHC.Generics.DecidedLazy) -}
+e082c4be356293409e1386f80b501131
+  $fFromJSONUser_go ::
+    GHC.Prim.Int#
+    -> [Data.Aeson.Types.Internal.Value]
+    -> Data.Aeson.Types.Internal.Parser [Main.User]
+  {- Arity: 2, Strictness: <L,U><S,1*U> -}
+e082c4be356293409e1386f80b501131
+  $fGenericUser :: GHC.Generics.Generic Main.User
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.User
+                  Main.$fGenericUser1
+                    `cast`
+                  (forall (x :: <*>_N).
+                   <Main.User>_R
+                   ->_R (Sym (GHC.Generics.N:M1[0]
+                                  <*>_N
+                                  <GHC.Generics.D>_P
+                                  <'GHC.Generics.MetaData "User" "Main" "main" 'GHC.Types.False>_P
+                                  <GHC.Generics.M1
+                                     GHC.Generics.C
+                                     ('GHC.Generics.MetaCons
+                                        "User" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                     (GHC.Generics.M1
+                                        GHC.Generics.S
+                                        ('GHC.Generics.MetaSel
+                                           ('GHC.Base.Just "userId")
+                                           'GHC.Generics.NoSourceUnpackedness
+                                           'GHC.Generics.NoSourceStrictness
+                                           'GHC.Generics.DecidedLazy)
+                                        (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+                                      GHC.Generics.:*: GHC.Generics.M1
+                                                         GHC.Generics.S
+                                                         ('GHC.Generics.MetaSel
+                                                            ('GHC.Base.Just "userName")
+                                                            'GHC.Generics.NoSourceUnpackedness
+                                                            'GHC.Generics.NoSourceStrictness
+                                                            'GHC.Generics.DecidedLazy)
+                                                         (GHC.Generics.K1
+                                                            GHC.Generics.R
+                                                            GHC.Base.String))>_R) ; Sub (Sym (Main.Rep_User[0]))) <x>_N)
+                  Main.$fGenericUser_$cto -}
+e082c4be356293409e1386f80b501131
+  $fGenericUser1 ::
+    Main.User
+    -> GHC.Generics.M1
+         GHC.Generics.C
+         ('GHC.Generics.MetaCons
+            "User" 'GHC.Generics.PrefixI 'GHC.Types.True)
+         (GHC.Generics.M1
+            GHC.Generics.S
+            ('GHC.Generics.MetaSel
+               ('GHC.Base.Just "userId")
+               'GHC.Generics.NoSourceUnpackedness
+               'GHC.Generics.NoSourceStrictness
+               'GHC.Generics.DecidedLazy)
+            (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+          GHC.Generics.:*: GHC.Generics.M1
+                             GHC.Generics.S
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "userName")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.K1 GHC.Generics.R GHC.Base.String))
+         x
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ x (x1 :: Main.User) ->
+                 case x1 of wild { Main.User g1 g2 ->
+                 (GHC.Generics.:*:
+                    @ *
+                    @ (GHC.Generics.M1
+                         GHC.Generics.S
+                         ('GHC.Generics.MetaSel
+                            ('GHC.Base.Just "userId")
+                            'GHC.Generics.NoSourceUnpackedness
+                            'GHC.Generics.NoSourceStrictness
+                            'GHC.Generics.DecidedLazy)
+                         (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int))
+                    @ (GHC.Generics.M1
+                         GHC.Generics.S
+                         ('GHC.Generics.MetaSel
+                            ('GHC.Base.Just "userName")
+                            'GHC.Generics.NoSourceUnpackedness
+                            'GHC.Generics.NoSourceStrictness
+                            'GHC.Generics.DecidedLazy)
+                         (GHC.Generics.K1 GHC.Generics.R GHC.Base.String))
+                    @ x
+                    g1
+                      `cast`
+                    (Sym (GHC.Generics.N:K1[0]
+                              <*>_N
+                              <GHC.Generics.R>_P
+                              <GHC.Types.Int>_R
+                              <x>_P) ; Sym (GHC.Generics.N:M1[0]
+                                                <*>_N
+                                                <GHC.Generics.S>_P
+                                                <'GHC.Generics.MetaSel
+                                                   ('GHC.Base.Just "userId")
+                                                   'GHC.Generics.NoSourceUnpackedness
+                                                   'GHC.Generics.NoSourceStrictness
+                                                   'GHC.Generics.DecidedLazy>_P
+                                                <GHC.Generics.K1
+                                                   GHC.Generics.R GHC.Types.Int>_R) <x>_N)
+                    g2
+                      `cast`
+                    (Sym (GHC.Generics.N:K1[0]
+                              <*>_N
+                              <GHC.Generics.R>_P
+                              <GHC.Base.String>_R
+                              <x>_P) ; Sym (GHC.Generics.N:M1[0]
+                                                <*>_N
+                                                <GHC.Generics.S>_P
+                                                <'GHC.Generics.MetaSel
+                                                   ('GHC.Base.Just "userName")
+                                                   'GHC.Generics.NoSourceUnpackedness
+                                                   'GHC.Generics.NoSourceStrictness
+                                                   'GHC.Generics.DecidedLazy>_P
+                                                <GHC.Generics.K1
+                                                   GHC.Generics.R GHC.Base.String>_R) <x>_N))
+                   `cast`
+                 (Sym (GHC.Generics.N:M1[0]
+                           <*>_N
+                           <GHC.Generics.C>_P
+                           <'GHC.Generics.MetaCons
+                              "User" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                           <GHC.Generics.M1
+                              GHC.Generics.S
+                              ('GHC.Generics.MetaSel
+                                 ('GHC.Base.Just "userId")
+                                 'GHC.Generics.NoSourceUnpackedness
+                                 'GHC.Generics.NoSourceStrictness
+                                 'GHC.Generics.DecidedLazy)
+                              (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+                            GHC.Generics.:*: GHC.Generics.M1
+                                               GHC.Generics.S
+                                               ('GHC.Generics.MetaSel
+                                                  ('GHC.Base.Just "userName")
+                                                  'GHC.Generics.NoSourceUnpackedness
+                                                  'GHC.Generics.NoSourceStrictness
+                                                  'GHC.Generics.DecidedLazy)
+                                               (GHC.Generics.K1
+                                                  GHC.Generics.R GHC.Base.String)>_R) <x>_N) }) -}
+e082c4be356293409e1386f80b501131
+  $fGenericUser_$cto :: GHC.Generics.Rep Main.User x -> Main.User
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ x (ds :: GHC.Generics.Rep Main.User x) ->
+                 case ds
+                        `cast`
+                      ((Sub (Main.Rep_User[0]) ; (GHC.Generics.N:M1[0]
+                                                      <*>_N
+                                                      <GHC.Generics.D>_P
+                                                      <'GHC.Generics.MetaData
+                                                         "User" "Main" "main" 'GHC.Types.False>_P
+                                                      <GHC.Generics.M1
+                                                         GHC.Generics.C
+                                                         ('GHC.Generics.MetaCons
+                                                            "User"
+                                                            'GHC.Generics.PrefixI
+                                                            'GHC.Types.True)
+                                                         (GHC.Generics.M1
+                                                            GHC.Generics.S
+                                                            ('GHC.Generics.MetaSel
+                                                               ('GHC.Base.Just "userId")
+                                                               'GHC.Generics.NoSourceUnpackedness
+                                                               'GHC.Generics.NoSourceStrictness
+                                                               'GHC.Generics.DecidedLazy)
+                                                            (GHC.Generics.K1
+                                                               GHC.Generics.R GHC.Types.Int)
+                                                          GHC.Generics.:*: GHC.Generics.M1
+                                                                             GHC.Generics.S
+                                                                             ('GHC.Generics.MetaSel
+                                                                                ('GHC.Base.Just
+                                                                                   "userName")
+                                                                                'GHC.Generics.NoSourceUnpackedness
+                                                                                'GHC.Generics.NoSourceStrictness
+                                                                                'GHC.Generics.DecidedLazy)
+                                                                             (GHC.Generics.K1
+                                                                                GHC.Generics.R
+                                                                                GHC.Base.String))>_R ; GHC.Generics.N:M1[0]
+                                                                                                           <*>_N
+                                                                                                           <GHC.Generics.C>_P
+                                                                                                           <'GHC.Generics.MetaCons
+                                                                                                              "User"
+                                                                                                              'GHC.Generics.PrefixI
+                                                                                                              'GHC.Types.True>_P
+                                                                                                           <GHC.Generics.M1
+                                                                                                              GHC.Generics.S
+                                                                                                              ('GHC.Generics.MetaSel
+                                                                                                                 ('GHC.Base.Just
+                                                                                                                    "userId")
+                                                                                                                 'GHC.Generics.NoSourceUnpackedness
+                                                                                                                 'GHC.Generics.NoSourceStrictness
+                                                                                                                 'GHC.Generics.DecidedLazy)
+                                                                                                              (GHC.Generics.K1
+                                                                                                                 GHC.Generics.R
+                                                                                                                 GHC.Types.Int)
+                                                                                                            GHC.Generics.:*: GHC.Generics.M1
+                                                                                                                               GHC.Generics.S
+                                                                                                                               ('GHC.Generics.MetaSel
+                                                                                                                                  ('GHC.Base.Just
+                                                                                                                                     "userName")
+                                                                                                                                  'GHC.Generics.NoSourceUnpackedness
+                                                                                                                                  'GHC.Generics.NoSourceStrictness
+                                                                                                                                  'GHC.Generics.DecidedLazy)
+                                                                                                                               (GHC.Generics.K1
+                                                                                                                                  GHC.Generics.R
+                                                                                                                                  GHC.Base.String)>_R)) <x>_N) of wild { GHC.Generics.:*: ds1 ds2 ->
+                 Main.User
+                   ds1
+                     `cast`
+                   (GHC.Generics.N:M1[0]
+                        <*>_N
+                        <GHC.Generics.S>_P
+                        <'GHC.Generics.MetaSel
+                           ('GHC.Base.Just "userId")
+                           'GHC.Generics.NoSourceUnpackedness
+                           'GHC.Generics.NoSourceStrictness
+                           'GHC.Generics.DecidedLazy>_P
+                        <GHC.Generics.K1
+                           GHC.Generics.R GHC.Types.Int>_R <x>_N ; GHC.Generics.N:K1[0]
+                                                                       <*>_N
+                                                                       <GHC.Generics.R>_P
+                                                                       <GHC.Types.Int>_R
+                                                                       <x>_P)
+                   ds2
+                     `cast`
+                   (GHC.Generics.N:M1[0]
+                        <*>_N
+                        <GHC.Generics.S>_P
+                        <'GHC.Generics.MetaSel
+                           ('GHC.Base.Just "userName")
+                           'GHC.Generics.NoSourceUnpackedness
+                           'GHC.Generics.NoSourceStrictness
+                           'GHC.Generics.DecidedLazy>_P
+                        <GHC.Generics.K1
+                           GHC.Generics.R GHC.Base.String>_R <x>_N ; GHC.Generics.N:K1[0]
+                                                                         <*>_N
+                                                                         <GHC.Generics.R>_P
+                                                                         <GHC.Base.String>_R
+                                                                         <x>_P) }) -}
+e082c4be356293409e1386f80b501131
+  $fShowUser :: GHC.Show.Show Main.User
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.User
+                  Main.$fShowUser_$cshowsPrec
+                  Main.$fShowUser_$cshow
+                  Main.$fShowUser_$cshowList -}
+e082c4be356293409e1386f80b501131
+  $fShowUser1 :: Main.User -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U(1*U(U),1*U)><L,U>,
+     Unfolding: (\ (w :: Main.User) (w1 :: GHC.Base.String) ->
+                 case w of ww { Main.User ww1 ww2 ->
+                 Main.$w$cshowsPrec 0# ww1 ww2 w1 }) -}
+9c39774439d4b196f2c4274185937f8a
+  $fShowUser2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("}"#) -}
+f5e1329050e127022960bce86f1f1f36
+  $fShowUser3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("userName = "#) -}
+af5db10b36f0b7ae8aa68cd311f74ba2
+  $fShowUser4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("userId = "#) -}
+06b1a0ab6b6fa1a8eb1e5d4b24264fbd
+  $fShowUser5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("User {"#) -}
+376aef3a36f99bdb4175d8659155ca90
+  $fShowUser6 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.$fShow(,)3
+                   Main.$fShowUser7) -}
+bcf96eb5bb57e42a1f8b7be61c118dc8
+  $fShowUser7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   Main.$fShowUser2
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+e082c4be356293409e1386f80b501131
+  $fShowUser_$cshow :: Main.User -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U(U),1*U)>, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Main.User) ->
+                 case w of ww { Main.User ww1 ww2 -> Main.$w$cshow ww1 ww2 }) -}
+e082c4be356293409e1386f80b501131
+  $fShowUser_$cshowList :: [Main.User] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Main.User]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Main.User Main.$fShowUser1 ls s) -}
+e082c4be356293409e1386f80b501131
+  $fShowUser_$cshowsPrec ::
+    GHC.Types.Int -> Main.User -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U(U),1*U)><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Main.User)
+                   (w3 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Main.User ww3 ww4 ->
+                 Main.$w$cshowsPrec ww1 ww3 ww4 w3 } }) -}
+e082c4be356293409e1386f80b501131
+  $fToJSONUser :: Data.Aeson.Types.ToJSON.ToJSON Main.User
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.User
+                  Main.$fToJSONUser_$ctoJSON
+                  Main.$fToJSONUser_$ctoEncoding
+                  Main.$fToJSONUser_$ctoJSONList
+                  Main.$fToJSONUser_$ctoEncodingList -}
+acab9c46d773e910ad20d6042ab83866
+  $fToJSONUser1 ::
+    Data.Aeson.Types.Internal.Options
+    -> Data.Aeson.Types.ToJSON.ToArgs
+         Data.Aeson.Types.Internal.Value Data.Aeson.Types.Generic.Zero a1
+    -> (GHC.Generics.:*:)
+         (GHC.Generics.S1
+            ('GHC.Generics.MetaSel
+               ('GHC.Base.Just "userId")
+               'GHC.Generics.NoSourceUnpackedness
+               'GHC.Generics.NoSourceStrictness
+               'GHC.Generics.DecidedLazy)
+            (GHC.Generics.Rec0 GHC.Types.Int))
+         (GHC.Generics.S1
+            ('GHC.Generics.MetaSel
+               ('GHC.Base.Just "userName")
+               'GHC.Generics.NoSourceUnpackedness
+               'GHC.Generics.NoSourceStrictness
+               'GHC.Generics.DecidedLazy)
+            (GHC.Generics.Rec0 GHC.Base.String))
+         a1
+    -> Data.Aeson.Types.Internal.Value
+  {- Arity: 3,
+     Strictness: <L,U(C(U),A,A,A,A,A,A)><L,A><S,1*U(1*U(U),1*U)>m1,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a1
+                   (w :: Data.Aeson.Types.Internal.Options)
+                   (w1 :: Data.Aeson.Types.ToJSON.ToArgs
+                            Data.Aeson.Types.Internal.Value Data.Aeson.Types.Generic.Zero a1)
+                   (w3 :: (GHC.Generics.:*:)
+                            (GHC.Generics.S1
+                               ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "userId")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.Rec0 GHC.Types.Int))
+                            (GHC.Generics.S1
+                               ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "userName")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.Rec0 GHC.Base.String))
+                            a1) ->
+                 case w3 of ww { GHC.Generics.:*: ww1 ww2 ->
+                 case Main.$w$dConsToJSON' @ a1 w ww1 ww2 of ww3 { Unit# ww4 ->
+                 Data.Aeson.Types.Internal.Object ww4 } }) -}
+e082c4be356293409e1386f80b501131
+  $fToJSONUser_$ctoEncoding ::
+    Main.User -> Data.Aeson.Encoding.Internal.Encoding
+  {- Arity: 1, Strictness: <S,1*U(1*U(U),1*U)>, Inline: (sat-args=0),
+     Unfolding: InlineRule (0, False, False)
+                (\ (x :: Main.User) ->
+                 case x of wild { Main.User g1 g2 ->
+                 Data.Aeson.Encoding.Builder.encodeToBuilder
+                   (Main.$fToJSONUser1
+                      @ GHC.Types.Any
+                      Main.$fFromJSONUser4
+                      (Data.Aeson.Types.ToJSON.$WNoToArgs
+                         @ Data.Aeson.Types.Internal.Value
+                         @ GHC.Types.Any)
+                      (GHC.Generics.:*:
+                         @ *
+                         @ (GHC.Generics.M1
+                              GHC.Generics.S
+                              ('GHC.Generics.MetaSel
+                                 ('GHC.Base.Just "userId")
+                                 'GHC.Generics.NoSourceUnpackedness
+                                 'GHC.Generics.NoSourceStrictness
+                                 'GHC.Generics.DecidedLazy)
+                              (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int))
+                         @ (GHC.Generics.M1
+                              GHC.Generics.S
+                              ('GHC.Generics.MetaSel
+                                 ('GHC.Base.Just "userName")
+                                 'GHC.Generics.NoSourceUnpackedness
+                                 'GHC.Generics.NoSourceStrictness
+                                 'GHC.Generics.DecidedLazy)
+                              (GHC.Generics.K1 GHC.Generics.R GHC.Base.String))
+                         @ GHC.Types.Any
+                         g1
+                           `cast`
+                         (Sym (GHC.Generics.N:K1[0]
+                                   <*>_N
+                                   <GHC.Generics.R>_P
+                                   <GHC.Types.Int>_R
+                                   <GHC.Types.Any>_P) ; Sym (GHC.Generics.N:M1[0]
+                                                                 <*>_N
+                                                                 <GHC.Generics.S>_P
+                                                                 <'GHC.Generics.MetaSel
+                                                                    ('GHC.Base.Just "userId")
+                                                                    'GHC.Generics.NoSourceUnpackedness
+                                                                    'GHC.Generics.NoSourceStrictness
+                                                                    'GHC.Generics.DecidedLazy>_P
+                                                                 <GHC.Generics.K1
+                                                                    GHC.Generics.R
+                                                                    GHC.Types.Int>_R) <GHC.Types.Any>_N)
+                         g2
+                           `cast`
+                         (Sym (GHC.Generics.N:K1[0]
+                                   <*>_N
+                                   <GHC.Generics.R>_P
+                                   <GHC.Base.String>_R
+                                   <GHC.Types.Any>_P) ; Sym (GHC.Generics.N:M1[0]
+                                                                 <*>_N
+                                                                 <GHC.Generics.S>_P
+                                                                 <'GHC.Generics.MetaSel
+                                                                    ('GHC.Base.Just "userName")
+                                                                    'GHC.Generics.NoSourceUnpackedness
+                                                                    'GHC.Generics.NoSourceStrictness
+                                                                    'GHC.Generics.DecidedLazy>_P
+                                                                 <GHC.Generics.K1
+                                                                    GHC.Generics.R
+                                                                    GHC.Base.String>_R) <GHC.Types.Any>_N))) })
+                  `cast`
+                (<Main.User>_R
+                 ->_R Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                               <Data.Aeson.Types.Internal.Value>_P)) -}
+e082c4be356293409e1386f80b501131
+  $fToJSONUser_$ctoEncodingList ::
+    [Main.User] -> Data.Aeson.Encoding.Internal.Encoding
+  {- Arity: 1, Inline: (sat-args=0),
+     Unfolding: InlineRule (0, False, False)
+                (Data.Aeson.Encoding.Internal.list
+                   @ Main.User
+                   Main.$fToJSONUser_$ctoEncoding) -}
+e082c4be356293409e1386f80b501131
+  $fToJSONUser_$ctoJSON ::
+    Main.User -> Data.Aeson.Types.Internal.Value
+  {- Arity: 1, Strictness: <S,1*U(1*U(U),1*U)>m1,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Main.User) ->
+                 case x of wild { Main.User g1 g2 ->
+                 Main.$fToJSONUser1
+                   @ GHC.Types.Any
+                   Main.$fFromJSONUser4
+                   (Data.Aeson.Types.ToJSON.$WNoToArgs
+                      @ Data.Aeson.Types.Internal.Value
+                      @ GHC.Types.Any)
+                   (GHC.Generics.:*:
+                      @ *
+                      @ (GHC.Generics.M1
+                           GHC.Generics.S
+                           ('GHC.Generics.MetaSel
+                              ('GHC.Base.Just "userId")
+                              'GHC.Generics.NoSourceUnpackedness
+                              'GHC.Generics.NoSourceStrictness
+                              'GHC.Generics.DecidedLazy)
+                           (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int))
+                      @ (GHC.Generics.M1
+                           GHC.Generics.S
+                           ('GHC.Generics.MetaSel
+                              ('GHC.Base.Just "userName")
+                              'GHC.Generics.NoSourceUnpackedness
+                              'GHC.Generics.NoSourceStrictness
+                              'GHC.Generics.DecidedLazy)
+                           (GHC.Generics.K1 GHC.Generics.R GHC.Base.String))
+                      @ GHC.Types.Any
+                      g1
+                        `cast`
+                      (Sym (GHC.Generics.N:K1[0]
+                                <*>_N
+                                <GHC.Generics.R>_P
+                                <GHC.Types.Int>_R
+                                <GHC.Types.Any>_P) ; Sym (GHC.Generics.N:M1[0]
+                                                              <*>_N
+                                                              <GHC.Generics.S>_P
+                                                              <'GHC.Generics.MetaSel
+                                                                 ('GHC.Base.Just "userId")
+                                                                 'GHC.Generics.NoSourceUnpackedness
+                                                                 'GHC.Generics.NoSourceStrictness
+                                                                 'GHC.Generics.DecidedLazy>_P
+                                                              <GHC.Generics.K1
+                                                                 GHC.Generics.R
+                                                                 GHC.Types.Int>_R) <GHC.Types.Any>_N)
+                      g2
+                        `cast`
+                      (Sym (GHC.Generics.N:K1[0]
+                                <*>_N
+                                <GHC.Generics.R>_P
+                                <GHC.Base.String>_R
+                                <GHC.Types.Any>_P) ; Sym (GHC.Generics.N:M1[0]
+                                                              <*>_N
+                                                              <GHC.Generics.S>_P
+                                                              <'GHC.Generics.MetaSel
+                                                                 ('GHC.Base.Just "userName")
+                                                                 'GHC.Generics.NoSourceUnpackedness
+                                                                 'GHC.Generics.NoSourceStrictness
+                                                                 'GHC.Generics.DecidedLazy>_P
+                                                              <GHC.Generics.K1
+                                                                 GHC.Generics.R
+                                                                 GHC.Base.String>_R) <GHC.Types.Any>_N)) }) -}
+e082c4be356293409e1386f80b501131
+  $fToJSONUser_$ctoJSONList ::
+    [Main.User] -> Data.Aeson.Types.Internal.Value
+  {- Arity: 1, Strictness: <S,1*U>m2, Inline: (sat-args=0),
+     Unfolding: InlineRule (0, False, False)
+                (\ (x :: [Main.User]) ->
+                 Data.Aeson.Types.Internal.$WArray
+                   (Data.Vector.Generic.new
+                      @ Data.Vector.Vector
+                      @ Data.Aeson.Types.Internal.Value
+                      (Data.Vector.$fVectorVectora @ Data.Aeson.Types.Internal.Value)
+                      (Data.Vector.Generic.New.unstream
+                         @ Data.Vector.Vector
+                         @ Data.Aeson.Types.Internal.Value
+                         (Data.Vector.$fVectorVectora @ Data.Aeson.Types.Internal.Value)
+                         (Data.Vector.Fusion.Bundle.Monadic.unsafeFromList
+                            @ Data.Vector.Fusion.Util.Id
+                            @ Data.Aeson.Types.Internal.Value
+                            @ Data.Vector.Vector
+                            Data.Vector.Fusion.Util.$fMonadId
+                            Data.Vector.Fusion.Bundle.Size.Unknown
+                            (GHC.Base.build
+                               @ Data.Aeson.Types.Internal.Value
+                               (\ @ b1
+                                  (c :: Data.Aeson.Types.Internal.Value -> b1 -> b1)[OneShot]
+                                  (n1 :: b1)[OneShot] ->
+                                GHC.Base.foldr
+                                  @ Main.User
+                                  @ b1
+                                  (GHC.Base.mapFB
+                                     @ Data.Aeson.Types.Internal.Value
+                                     @ b1
+                                     @ Main.User
+                                     c
+                                     Main.$fToJSONUser_$ctoJSON)
+                                  n1
+                                  x)))))) -}
+7d716594cacc99044321b8f27866b515
+  $s$fConstructorMetaMetaCons2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("User"#) -}
+a595d0fcddffc46edd5bd8e9b92c345d
+  $s$fToJSON[] :: Data.Aeson.Types.ToJSON.ToJSON [Main.User]
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ [Main.User]
+                  Main.$fToJSONUser_$ctoJSONList
+                  Main.$fToJSONUser_$ctoEncodingList
+                  (\ (x :: [[Main.User]]) ->
+                   Data.Aeson.Types.Internal.$WArray
+                     (Data.Vector.Generic.new
+                        @ Data.Vector.Vector
+                        @ Data.Aeson.Types.Internal.Value
+                        (Data.Vector.$fVectorVectora @ Data.Aeson.Types.Internal.Value)
+                        (Data.Vector.Generic.New.unstream
+                           @ Data.Vector.Vector
+                           @ Data.Aeson.Types.Internal.Value
+                           (Data.Vector.$fVectorVectora @ Data.Aeson.Types.Internal.Value)
+                           (Data.Vector.Fusion.Bundle.Monadic.unsafeFromList
+                              @ Data.Vector.Fusion.Util.Id
+                              @ Data.Aeson.Types.Internal.Value
+                              @ Data.Vector.Vector
+                              Data.Vector.Fusion.Util.$fMonadId
+                              Data.Vector.Fusion.Bundle.Size.Unknown
+                              (GHC.Base.build
+                                 @ Data.Aeson.Types.Internal.Value
+                                 (\ @ b1
+                                    (c :: Data.Aeson.Types.Internal.Value -> b1 -> b1)[OneShot]
+                                    (n1 :: b1)[OneShot] ->
+                                  GHC.Base.foldr
+                                    @ [Main.User]
+                                    @ b1
+                                    (GHC.Base.mapFB
+                                       @ Data.Aeson.Types.Internal.Value
+                                       @ b1
+                                       @ [Main.User]
+                                       c
+                                       Main.$fToJSONUser_$ctoJSONList)
+                                    n1
+                                    x))))))
+                  (Data.Aeson.Encoding.Internal.list
+                     @ [Main.User]
+                     Main.$fToJSONUser_$ctoEncodingList) -}
+8699d02a590ae7bd3a14a790e0a8f48d
+  $tc'User :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11946000597272154797##
+                   14513426697953938300##
+                   Main.$trModule
+                   Main.$tc'User2
+                   0#
+                   Main.$tc'User1) -}
+79b6144f6dc0b92368d27e4a147995e3
+  $tc'User1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+22c86b5f84a74d2f231dd5f2b7be02e7
+  $tc'User2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'User3) -}
+72a67a33dea96547d55a61725feeda8e
+  $tc'User3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'User"#) -}
+156ebd17bae84e5ba780c16d5bf66d16
+  $tcUser :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3086115112404147262##
+                   4933156830667254212##
+                   Main.$trModule
+                   Main.$tcUser1
+                   0#
+                   GHC.Types.krep$*) -}
+93fc008141cbd1311e8f4a45d745bdf5
+  $tcUser1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$s$fConstructorMetaMetaCons2) -}
 be86c9d078d3acbf19ba91fe74a24273
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
@@ -131,14 +1419,285 @@ e5875966b74dad2d29772660b8a75e33
 d026be77cb9ced20e35a61514e0458aa
   $trModule4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("main"#) -}
-9689556901ff9f0ab6f0bd32cae97eb2
+d2c4d9c65bc672be64e3ef816f881929
+  $w$cshow :: GHC.Types.Int -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U(U)><L,1*U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Types.Int) (ww1 :: GHC.Base.String) ->
+                 GHC.CString.unpackAppendCString#
+                   Main.$fShowUser5
+                   (GHC.CString.unpackAppendCString#
+                      Main.$fShowUser4
+                      (case ww of ww2 { GHC.Types.I# ww3 ->
+                       case GHC.Show.$wshowSignedInt
+                              0#
+                              ww3
+                              (GHC.Base.++
+                                 @ GHC.Types.Char
+                                 GHC.Show.showCommaSpace1
+                                 (GHC.CString.unpackAppendCString#
+                                    Main.$fShowUser3
+                                    (GHC.Types.:
+                                       @ GHC.Types.Char
+                                       GHC.Show.$fShow(,)3
+                                       (GHC.Show.showLitString
+                                          ww1
+                                          Main.$fShowUser6)))) of ww4 { (#,#) ww5 ww6 ->
+                       GHC.Types.: @ GHC.Types.Char ww5 ww6 } }))) -}
+40dca9c67c65fe2d3cfe74c709a0a83a
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 4, Strictness: <S,U><L,1*U(U)><L,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: GHC.Base.String)
+                   (w :: GHC.Base.String) ->
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     GHC.CString.unpackAppendCString#
+                       Main.$fShowUser5
+                       (GHC.CString.unpackAppendCString#
+                          Main.$fShowUser4
+                          (case ww1 of ww3 { GHC.Types.I# ww4 ->
+                           case GHC.Show.$wshowSignedInt
+                                  0#
+                                  ww4
+                                  (GHC.Base.++
+                                     @ GHC.Types.Char
+                                     GHC.Show.showCommaSpace1
+                                     (GHC.CString.unpackAppendCString#
+                                        Main.$fShowUser3
+                                        (GHC.Types.:
+                                           @ GHC.Types.Char
+                                           GHC.Show.$fShow(,)3
+                                           (GHC.Show.showLitString
+                                              ww2
+                                              (GHC.Types.:
+                                                 @ GHC.Types.Char
+                                                 GHC.Show.$fShow(,)3
+                                                 (GHC.CString.unpackAppendCString#
+                                                    Main.$fShowUser2
+                                                    x)))))) of ww5 { (#,#) ww6 ww7 ->
+                           GHC.Types.: @ GHC.Types.Char ww6 ww7 } }))
+                 } in
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT -> p w
+                   1#
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w)) }) -}
+fa75f6632092e48db87ec357cc76ac85
+  $w$dConsToJSON' ::
+    Data.Aeson.Types.Internal.Options
+    -> GHC.Generics.S1
+         ('GHC.Generics.MetaSel
+            ('GHC.Base.Just "userId")
+            'GHC.Generics.NoSourceUnpackedness
+            'GHC.Generics.NoSourceStrictness
+            'GHC.Generics.DecidedLazy)
+         (GHC.Generics.Rec0 GHC.Types.Int)
+         a1
+    -> GHC.Generics.S1
+         ('GHC.Generics.MetaSel
+            ('GHC.Base.Just "userName")
+            'GHC.Generics.NoSourceUnpackedness
+            'GHC.Generics.NoSourceStrictness
+            'GHC.Generics.DecidedLazy)
+         (GHC.Generics.Rec0 GHC.Base.String)
+         a1
+    -> (# Data.Aeson.Types.Internal.Object #)
+  {- Arity: 3, Strictness: <L,U(C(U),A,A,A,A,A,A)><L,1*U(U)><L,1*U>,
+     Inline: [0],
+     Unfolding: (\ @ a1
+                   (w :: Data.Aeson.Types.Internal.Options)
+                   (ww :: GHC.Generics.S1
+                            ('GHC.Generics.MetaSel
+                               ('GHC.Base.Just "userId")
+                               'GHC.Generics.NoSourceUnpackedness
+                               'GHC.Generics.NoSourceStrictness
+                               'GHC.Generics.DecidedLazy)
+                            (GHC.Generics.Rec0 GHC.Types.Int)
+                            a1)
+                   (ww1 :: GHC.Generics.S1
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "userName")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.Rec0 GHC.Base.String)
+                             a1) ->
+                 case Data.Aeson.Types.ToJSON.$fFromPairsValueDList_go
+                        (GHC.Types.:
+                           @ Data.Aeson.Types.Internal.Pair
+                           (case GHC.Magic.runRW#
+                                   @ ('GHC.Types.TupleRep
+                                        '['GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                                   @ (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                        Data.Text.Internal.Text #)
+                                   (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                    case GHC.Prim.newByteArray#
+                                           @ GHC.Prim.RealWorld
+                                           10#
+                                           s1 of ds1 { (#,#) ipv1 ipv2 ->
+                                    case w of wild { Data.Aeson.Types.Internal.Options ds2 ds3 ds4 ds5 ds6 ds7 ds8 ->
+                                    Data.Aeson.Types.ToJSON.$wouter1
+                                      ipv2
+                                      4#
+                                      (ds2 Main.$fFromJSONUser10)
+                                      0#
+                                      ipv1 } }) of ds1 { (#,#) ipv1 ipv2 ->
+                            ipv2 },
+                            case ww
+                                   `cast`
+                                 (GHC.Generics.N:M1[0]
+                                      <*>_N
+                                      <GHC.Generics.S>_P
+                                      <'GHC.Generics.MetaSel
+                                         ('GHC.Base.Just "userId")
+                                         'GHC.Generics.NoSourceUnpackedness
+                                         'GHC.Generics.NoSourceStrictness
+                                         'GHC.Generics.DecidedLazy>_P
+                                      <GHC.Generics.K1
+                                         GHC.Generics.R
+                                         GHC.Types.Int>_R <a1>_N ; GHC.Generics.N:K1[0]
+                                                                       <*>_N
+                                                                       <GHC.Generics.R>_P
+                                                                       <GHC.Types.Int>_R
+                                                                       <a1>_P) of wild { GHC.Types.I# i ->
+                            case GHC.Integer.Type.smallInteger i of dt { DEFAULT ->
+                            Data.Aeson.Types.Internal.Number
+                              (Data.Scientific.Scientific dt 0#) } })
+                           (GHC.Types.:
+                              @ Data.Aeson.Types.Internal.Pair
+                              (case GHC.Magic.runRW#
+                                      @ ('GHC.Types.TupleRep
+                                           '['GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                                      @ (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                           Data.Text.Internal.Text #)
+                                      (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                       case GHC.Prim.newByteArray#
+                                              @ GHC.Prim.RealWorld
+                                              10#
+                                              s1 of ds1 { (#,#) ipv1 ipv2 ->
+                                       case w of wild { Data.Aeson.Types.Internal.Options ds2 ds3 ds4 ds5 ds6 ds7 ds8 ->
+                                       Data.Aeson.Types.ToJSON.$wouter1
+                                         ipv2
+                                         4#
+                                         (ds2 Main.$fFromJSONUser7)
+                                         0#
+                                         ipv1 } }) of ds1 { (#,#) ipv1 ipv2 ->
+                               ipv2 },
+                               case GHC.Magic.runRW#
+                                      @ ('GHC.Types.TupleRep
+                                           '['GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                                      @ (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                           Data.Text.Internal.Text #)
+                                      (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                       case GHC.Prim.newByteArray#
+                                              @ GHC.Prim.RealWorld
+                                              10#
+                                              s1 of ds1 { (#,#) ipv ipv1 ->
+                                       Main.$wouter
+                                         ipv1
+                                         4#
+                                         ww1
+                                           `cast`
+                                         (GHC.Generics.N:M1[0]
+                                              <*>_N
+                                              <GHC.Generics.S>_P
+                                              <'GHC.Generics.MetaSel
+                                                 ('GHC.Base.Just "userName")
+                                                 'GHC.Generics.NoSourceUnpackedness
+                                                 'GHC.Generics.NoSourceStrictness
+                                                 'GHC.Generics.DecidedLazy>_P
+                                              <GHC.Generics.K1
+                                                 GHC.Generics.R
+                                                 GHC.Base.String>_R <a1>_N ; GHC.Generics.N:K1[0]
+                                                                                 <*>_N
+                                                                                 <GHC.Generics.R>_P
+                                                                                 <[GHC.Types.Char]>_R
+                                                                                 <a1>_P)
+                                         0#
+                                         ipv }) of ds1 { (#,#) ipv ipv1 ->
+                               case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
+                               Data.Aeson.Types.Internal.String dt } })
+                              (GHC.Types.[] @ Data.Aeson.Types.Internal.Pair)))
+                        (Data.HashMap.Base.Empty
+                           @ Data.Text.Internal.Text
+                           @ Data.Aeson.Types.Internal.Value) of ww2 { Data.Aeson.Types.Internal.Object ww3 ->
+                 (# ww3 #) }) -}
+861f35c73488bc3324d1a9594d18064e
+  $wouter ::
+    GHC.Prim.MutableByteArray# GHC.Prim.RealWorld
+    -> GHC.Prim.Int#
+    -> [GHC.Types.Char]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 5, Strictness: <L,U><S,U><S,1*U><S,U><S,U>,
+     Inline: [0] -}
+e082c4be356293409e1386f80b501131
+  axiom Main.Rep_User::
+      GHC.Generics.Rep Main.User
+        = GHC.Generics.D1
+            ('GHC.Generics.MetaData "User" "Main" "main" 'GHC.Types.False)
+            (GHC.Generics.C1
+               ('GHC.Generics.MetaCons
+                  "User" 'GHC.Generics.PrefixI 'GHC.Types.True)
+               (GHC.Generics.S1
+                  ('GHC.Generics.MetaSel
+                     ('GHC.Base.Just "userId")
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0 GHC.Types.Int)
+                GHC.Generics.:*: GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "userName")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 GHC.Base.String)))
+e082c4be356293409e1386f80b501131
+  data User
+    = User {userId :: GHC.Types.Int, userName :: GHC.Base.String}
+e5f7b9a615d661d2a83aafe02577bead
+  allUsers :: [Main.User]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.: @ Main.User Main.bob Main.allUsers1) -}
+7fa8c504d8ff2a9e5f05a3c2e98eb54c
+  allUsers1 :: [Main.User]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Main.User
+                   Main.jenny
+                   (GHC.Types.[] @ Main.User)) -}
+bfe749365bb3e33f2a426ac3774bf047
+  bob :: Main.User
+  {- Strictness: m, Unfolding: (Main.User Main.bob3 Main.bob1) -}
+982ed1e0f2db31b9589c2b35e9cc86ef
+  bob1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.bob2) -}
+6a0c378519476ed454a2340f958731ee
+  bob2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("bob"#) -}
+8db2816fe69487eae24179df9465260a
+  bob3 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
+d27b29bcf8553b79b8fcc474294c519c
   exercise :: GHC.Types.Int -> GHC.Types.IO ()
   {- Arity: 2, Strictness: <L,1*U(U)><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.exercise1
                   `cast`
                 (<GHC.Types.Int>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-65ce0273257ce0c14135f3e58c8f5987
+474800b72fc419def078145ae3bb9d5a
   exercise1 ::
     GHC.Types.Int
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -167,17 +1726,17 @@ d026be77cb9ced20e35a61514e0458aa
                              -> (# GHC.Prim.State# GHC.Prim.RealWorld, [()] #)
                      {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0] -}
                    = \ (ww2 :: GHC.Prim.Int#)
-                       (w2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                       (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
                      case GHC.Prim.<=# ww2 0# of lwild {
                        DEFAULT
                        -> case GHC.IO.Handle.Text.hPutStr2
                                  GHC.IO.Handle.FD.stdout
                                  ipv3
                                  GHC.Types.True
-                                 w2 of ds { (#,#) ipv4 ipv5 ->
+                                 w1 of ds { (#,#) ipv4 ipv5 ->
                           case $wloop (GHC.Prim.-# ww2 1#) ipv4 of ds3 { (#,#) ipv6 ipv7 ->
                           (# ipv6, GHC.Types.: @ () ipv5 ipv7 #) } }
-                       1# -> (# w2, GHC.Types.[] @ () #) }
+                       1# -> (# w1, GHC.Types.[] @ () #) }
                  } in
                  case $wloop ww1 ipv2 of ds3 { (#,#) ipv4 ipv5 ->
                  (# ipv4, GHC.Tuple.() #) } } } }) -}
@@ -211,214 +1770,373 @@ d026be77cb9ced20e35a61514e0458aa
 164dab1404bc0ebb57fd30a9552b142d
   greet2 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("Hello "#) -}
-707569d8e914e609ea8dd4b780f03d6b
+cf7b99f32b08b6d8c4aeb0474f7bd133
+  jenny :: Main.User
+  {- Strictness: m, Unfolding: (Main.User Main.jenny3 Main.jenny1) -}
+fd6345d4fe07025a5232072294a52e58
+  jenny1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.jenny2) -}
+63f60abb72d3543db391a40fe64dfa8c
+  jenny2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("jenny"#) -}
+98419d3315443e80fbaf2e7b697c3179
+  jenny3 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
+112e407d2927df123f4a875189518f4a
   main :: GHC.Types.IO ()
-  {- Arity: 1,
+  {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main2 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-276fae9120200ccd17ea27c4d2901fa1
+d048baafeb3faa230ee52d581b08f6f1
   main0 :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
-                Main.main6 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-6937c2437f9c2b222590bafd452aeca8
+                Main.main24 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+594f7a4ad4d50c7ff6f6b4f10a7285a1
   main1 :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
-                Main.main29 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-7db8158d436be12e765d727037b47fdb
-  main10 :: [GHC.Types.Int]
-  {- HasNoCafRefs, Strictness: m2,
-     Unfolding: (GHC.Types.: @ GHC.Types.Int Main.main15 Main.main11) -}
-9670cf0accf15f06c85901e4c44495a1
-  main11 :: [GHC.Types.Int]
-  {- HasNoCafRefs, Strictness: m2,
-     Unfolding: (GHC.Types.: @ GHC.Types.Int Main.main14 Main.main12) -}
-3f4a4e8a237d50d5d22e03ac33ae8cca
-  main12 :: [GHC.Types.Int]
-  {- HasNoCafRefs, Strictness: m2,
-     Unfolding: (GHC.Types.:
-                   @ GHC.Types.Int
-                   Main.main13
-                   (GHC.Types.[] @ GHC.Types.Int)) -}
-7f97adb76a242ded0741ad6d2407b3d0
-  main13 :: GHC.Types.Int
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 4#) -}
-17c638d3b0a0df7e7f9a63a2e2b43266
-  main14 :: GHC.Types.Int
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3#) -}
-cf2027bf406a03f4dcd88c91d2d00fb6
-  main15 :: GHC.Types.Int
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
-edb324493511bf6a3dd56622dd2c8a88
-  main16 ::
-    [GHC.Types.Int]
-    -> forall r.
-       Data.ByteString.Builder.Internal.BuildStep r
-       -> Data.ByteString.Builder.Internal.BufferRange
-       -> GHC.Prim.State# GHC.Prim.RealWorld
-       -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-             Data.ByteString.Builder.Internal.BuildSignal r #)
-  {- Arity: 4, HasNoCafRefs,
-     Strictness: <S,1*U><L,C(C1(U(U,U)))><L,U(U,U)><S,U> -}
-f896f97fe5079143f885bf9993a3e6ca
-  main17 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 1, Strictness: <S,U>,
-     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
-                 case GHC.IO.Handle.FD.openFile1
-                        Main.main18
-                        GHC.IO.IOMode.ReadMode
-                        s of ds1 { (#,#) ipv ipv1 ->
-                 case GHC.IO.Handle.Text.hGetContents1
-                        ipv1
-                        ipv of ds2 { (#,#) ipv2 ipv3 ->
-                 GHC.IO.Handle.Text.hPutStr2
-                   GHC.IO.Handle.FD.stdout
-                   ipv3
-                   GHC.Types.True
-                   ipv2 } }) -}
-f293a7e7b9511c41dd358e9cb8850040
-  main18 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# Main.main19) -}
-938890300c982aac594a3f22d3f7f580
-  main19 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("stack.yaml"#) -}
-6828c2c7d044ac770ecf7846f4abd3c3
+                Main.main46 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+ffb76d358b851bf68ad87433043b53c2
+  main10 :: Data.Text.Internal.Lazy.Text
+  {- Unfolding: (case GHC.Base.map
+                        @ GHC.Types.Char
+                        @ GHC.Types.Char
+                        Data.Text.Internal.safe
+                        (GHC.CString.unpackCString# Main.main11) of dt { DEFAULT ->
+                 Web.Scotty.Internal.Types.$fIsStringRoutePattern_outer dt }) -}
+4ef4d46919535240bc4178c166227612
+  main11 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("/users"#) -}
+e6d54c0b6fd7e0ea951ee875ee2d113c
+  main12 ::
+    Web.Scotty.Internal.Types.ActionEnv
+    -> Control.Monad.Trans.State.Lazy.StateT
+         Web.Scotty.Internal.Types.ScottyResponse
+         GHC.Types.IO
+         (Data.Either.Either
+            (Web.Scotty.Internal.Types.ActionError
+               Data.Text.Internal.Lazy.Text)
+            ())
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (w4 :: Web.Scotty.Internal.Types.ActionEnv) ->
+                 let {
+                   m1 :: Control.Monad.Trans.State.Lazy.StateT
+                           Web.Scotty.Internal.Types.ScottyResponse
+                           GHC.Types.IO
+                           (Data.Either.Either
+                              (Web.Scotty.Internal.Types.ActionError
+                                 Data.Text.Internal.Lazy.Text)
+                              GHC.Types.Int)
+                   = Web.Scotty.Action.param1
+                       @ GHC.Types.Int
+                       @ Data.Text.Internal.Lazy.Text
+                       @ GHC.Types.IO
+                       Web.Scotty.Action.$fParsableInt
+                       Web.Scotty.Internal.Types.$fScottyErrorText
+                       GHC.Base.$fMonadIO
+                       Main.main13
+                       w4
+                 } in
+                 (\ (s1 :: Web.Scotty.Internal.Types.ScottyResponse)
+                    (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                  case (m1
+                          `cast`
+                        (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                             <Web.Scotty.Internal.Types.ScottyResponse>_N
+                             <GHC.Types.IO>_R
+                             <Data.Either.Either
+                                (Web.Scotty.Internal.Types.ActionError
+                                   Data.Text.Internal.Lazy.Text)
+                                GHC.Types.Int>_N)
+                          s1)
+                         `cast`
+                       (GHC.Types.N:IO[0]
+                            <(Data.Either.Either
+                                (Web.Scotty.Internal.Types.ActionError
+                                   Data.Text.Internal.Lazy.Text)
+                                GHC.Types.Int,
+                              Web.Scotty.Internal.Types.ScottyResponse)>_R)
+                         s of ds1 { (#,#) ipv ipv1 ->
+                  case ipv1 of ww { (,) ww1 ww2 ->
+                  case ww1 of wild {
+                    Data.Either.Left e1
+                    -> (# ipv,
+                          (Data.Either.Left
+                             @ (Web.Scotty.Internal.Types.ActionError
+                                  Data.Text.Internal.Lazy.Text)
+                             @ ()
+                             e1,
+                           ww2) #)
+                    Data.Either.Right x
+                    -> (((Web.Scotty.Action.$wjson
+                            @ [Main.User]
+                            @ Data.Text.Internal.Lazy.Text
+                            @ GHC.Types.IO
+                            Main.$s$fToJSON[]
+                            GHC.Base.$fMonadIO
+                            (GHC.List.filter @ Main.User (Main.matchesId x) Main.allUsers))
+                           `cast`
+                         (Web.Scotty.Internal.Types.N:ActionT[0]
+                              <Data.Text.Internal.Lazy.Text>_N
+                              <GHC.Types.IO>_R <()>_N ; (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                             <Web.Scotty.Internal.Types.ActionError
+                                                                Data.Text.Internal.Lazy.Text>_N
+                                                             <Control.Monad.Trans.Reader.ReaderT
+                                                                Web.Scotty.Internal.Types.ActionEnv
+                                                                (Control.Monad.Trans.State.Lazy.StateT
+                                                                   Web.Scotty.Internal.Types.ScottyResponse
+                                                                   GHC.Types.IO)>_R
+                                                             <()>_N ; Control.Monad.Trans.Reader.N:ReaderT[0]
+                                                                          <*>_N
+                                                                          <Web.Scotty.Internal.Types.ActionEnv>_R
+                                                                          <Control.Monad.Trans.State.Lazy.StateT
+                                                                             Web.Scotty.Internal.Types.ScottyResponse
+                                                                             GHC.Types.IO>_R
+                                                                          <Data.Either.Either
+                                                                             (Web.Scotty.Internal.Types.ActionError
+                                                                                Data.Text.Internal.Lazy.Text)
+                                                                             ()>_N))
+                           w4)
+                          `cast`
+                        (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                             <Web.Scotty.Internal.Types.ScottyResponse>_N
+                             <GHC.Types.IO>_R
+                             <Data.Either.Either
+                                (Web.Scotty.Internal.Types.ActionError
+                                   Data.Text.Internal.Lazy.Text)
+                                ()>_N)
+                          ww2)
+                         `cast`
+                       (GHC.Types.N:IO[0]
+                            <(Data.Either.Either
+                                (Web.Scotty.Internal.Types.ActionError
+                                   Data.Text.Internal.Lazy.Text)
+                                (),
+                              Web.Scotty.Internal.Types.ScottyResponse)>_R)
+                         ipv } } })
+                   `cast`
+                 ((<Web.Scotty.Internal.Types.ScottyResponse>_R
+                   ->_R Sym (GHC.Types.N:IO[0]
+                                 <(Data.Either.Either
+                                     (Web.Scotty.Internal.Types.ActionError
+                                        Data.Text.Internal.Lazy.Text)
+                                     (),
+                                   Web.Scotty.Internal.Types.ScottyResponse)>_R)) ; Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                                                                                             <Web.Scotty.Internal.Types.ScottyResponse>_N
+                                                                                             <GHC.Types.IO>_R
+                                                                                             <Data.Either.Either
+                                                                                                (Web.Scotty.Internal.Types.ActionError
+                                                                                                   Data.Text.Internal.Lazy.Text)
+                                                                                                ()>_N))) -}
+7476e0f08157f05f48688aad8b1fe0f1
+  main13 :: Data.Text.Internal.Lazy.Text
+  {- Unfolding: (Data.Text.Lazy.unpackCString# Main.main14) -}
+38a50356a0923d7751f721f4bc07d2ce
+  main14 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("id"#) -}
+4406d8de4e2b2bfd273b82500c058365
+  main15 :: Web.Scotty.Internal.Types.RoutePattern
+  {- Strictness: m1,
+     Unfolding: (Web.Scotty.Internal.Types.Capture Main.main16) -}
+fccd06ac869f7b5dc7fedfb55a605aab
+  main16 :: Data.Text.Internal.Lazy.Text
+  {- Unfolding: (case GHC.Base.map
+                        @ GHC.Types.Char
+                        @ GHC.Types.Char
+                        Data.Text.Internal.safe
+                        (GHC.CString.unpackCString# Main.main17) of dt { DEFAULT ->
+                 Web.Scotty.Internal.Types.$fIsStringRoutePattern_outer dt }) -}
+a5ab40e4ba6ba00354ce1f752fcc6007
+  main17 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("/users/:id"#) -}
+4f550574551c43e933edf96d796b0ef5
+  main18 :: Network.Wai.Handler.Warp.Types.Port
+  {- Strictness: x -}
+c97327cc41c22476d792f377455336ff
+  main19 :: Network.Wai.Handler.Warp.Types.Port
+  {- Strictness: x -}
+587a7190295419aeb21f63bc4c3b74d2
   main2 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 1,
-     Unfolding: (GHC.IO.Handle.Text.hPutStr2
-                   GHC.IO.Handle.FD.stdout
-                   Main.main3
-                   GHC.Types.True) -}
-e10d84f501f3d82cb6628a185e34e1a5
-  main20 :: GHC.Base.String
-  {- Unfolding: (case GHC.Show.$w$cshowsPrec4
-                        0#
-                        Main.main21
-                        (GHC.Types.[] @ GHC.Types.Char) of ww2 { (#,#) ww3 ww4 ->
-                 GHC.Types.: @ GHC.Types.Char ww3 ww4 }) -}
-606933fbf4183149ecc2329ae3c2e93c
-  main21 :: GHC.Integer.Type.Integer
-  {- HasNoCafRefs, Unfolding: (7) -}
-6a1336e491a9cc3e48480018760d4e53
-  main22 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackAppendCString#
-                   Main.greet2
-                   Main.main23) -}
-056269f092851e2d27c476700ba5f452
-  main23 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   (GHC.CString.unpackCString# Main.main25)
-                   Main.main24) -}
-6fa354d91e437b96266113f8ff9b0244
-  main24 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# Main.greet1) -}
-360397312ab822f838a91ed7b3a7c67b
-  main25 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("world"#) -}
-52be211dab928fa7a8bc6b79f40cfbb0
-  main26 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackAppendCString#
-                   Main.greet2
-                   Main.main27) -}
-7674ae99b720c2da6f23e8e583b0502c
-  main27 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   (GHC.CString.unpackCString# Main.main28)
-                   Main.main24) -}
-b34fc5f86e160876a33358e5ebf3d863
-  main28 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("oscar"#) -}
-0f03bb60c937cfc1f8f75ef4a3788c90
-  main29 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
-                 case (Foreign.Marshal.Alloc.allocaBytesAligned
-                         @ Foreign.C.Types.CInt
-                         @ [GHC.Base.String]
-                         Foreign.Storable.$fStorableBool7
-                         Foreign.Storable.$fStorableBool7
-                         System.Environment.getArgs1
-                           `cast`
-                         (<GHC.Ptr.Ptr Foreign.C.Types.CInt>_R
-                          ->_R Sym (GHC.Types.N:IO[0] <[GHC.Base.String]>_R)))
-                        `cast`
-                      (GHC.Types.N:IO[0] <[GHC.Base.String]>_R)
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main21
+                        GHC.Types.True
                         s of ds1 { (#,#) ipv ipv1 ->
-                 case Main.main30 ipv1 ipv of ds2 { (#,#) ipv2 ipv3 ->
-                 GHC.IO.Handle.Text.hPutStr2
-                   GHC.IO.Handle.FD.stdout
-                   (GHC.List.$w!! @ GHC.Base.String ipv3 0#)
-                   GHC.Types.True
-                   ipv2 } }) -}
-771039a918e589168a1bdcaf3a709b82
-  main3 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# Main.main4) -}
-97a81e7116df07d255e16b7c52425c1b
-  main30 ::
-    [GHC.IO.FilePath]
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Base.String] #)
-  {- Arity: 2, Strictness: <S,1*U><S,U> -}
-67cfaec2c642e0d50ac93731b3a818ed
-  main4 :: GHC.Prim.Addr#
+                 case (GHC.Magic.noinline
+                         @ (GHC.Types.IO GHC.IO.Encoding.Types.TextEncoding)
+                         GHC.IO.Encoding.getForeignEncoding)
+                        `cast`
+                      (GHC.Types.N:IO[0] <GHC.IO.Encoding.Types.TextEncoding>_R)
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case GHC.Foreign.charIsRepresentable3
+                        @ (GHC.Base.Maybe GHC.Base.String)
+                        ipv3
+                        Main.main_name
+                        System.Environment.getEnv3
+                          `cast`
+                        (<Foreign.C.String.CString>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.Maybe GHC.Base.String>_R))
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case ipv5 of wild {
+                   GHC.Base.Nothing
+                   -> case System.Environment.getEnv2 ipv4 Main.main_name
+                      ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                      of {}
+                   GHC.Base.Just x
+                   -> (Web.Scotty.Trans.scottyOptsT
+                         @ GHC.Types.IO
+                         @ GHC.Types.IO
+                         @ Data.Text.Internal.Lazy.Text
+                         GHC.Base.$fMonadIO
+                         Control.Monad.IO.Class.$fMonadIOIO
+                         (Web.Scotty.Internal.Types.Options
+                            Web.Scotty.Internal.Types.$fDefaultOptions1
+                            (Network.Wai.Handler.Warp.Settings.Settings
+                               (case Text.Read.readEither8
+                                       @ Network.Wai.Handler.Warp.Types.Port
+                                       (Text.ParserCombinators.ReadP.run
+                                          @ Network.Wai.Handler.Warp.Types.Port
+                                          (GHC.Read.$fReadInt_$sreadNumber
+                                             GHC.Read.$fReadInt2
+                                             Text.ParserCombinators.ReadPrec.minPrec
+                                             @ Network.Wai.Handler.Warp.Types.Port
+                                             (Text.Read.readEither7
+                                                @ Network.Wai.Handler.Warp.Types.Port))
+                                          x) of wild1 {
+                                  [] -> Main.main19
+                                  : x1 ds
+                                  -> case ds of wild2 { [] -> x1 : ipv6 ipv7 -> Main.main18 } })
+                               Network.Wai.Handler.Warp.Settings.defaultSettings16
+                               Network.Wai.Handler.Warp.Settings.defaultOnException1
+                                 `cast`
+                               (<GHC.Base.Maybe Network.Wai.Internal.Request>_R
+                                ->_R <GHC.Exception.SomeException>_R
+                                ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                               Network.Wai.Handler.Warp.Settings.defaultOnExceptionResponse
+                               Network.Wai.Handler.Warp.Settings.defaultSettings15
+                                 `cast`
+                               (<Network.Socket.Types.SockAddr>_R
+                                ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R))
+                               Network.Wai.Handler.Warp.Settings.defaultSettings14
+                                 `cast`
+                               (<Network.Socket.Types.SockAddr>_R
+                                ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                               Network.Wai.Handler.Warp.Settings.defaultSettings13
+                               (GHC.Base.Nothing @ Network.Wai.Handler.Warp.Timeout.Manager)
+                               Network.Wai.Handler.Warp.Settings.defaultSettings12
+                               Network.Wai.Handler.Warp.Settings.defaultSettings12
+                               Network.Wai.Handler.Warp.Settings.defaultSettings11
+                                 `cast`
+                               (Sym (GHC.Types.N:IO[0] <()>_R))
+                               Network.Wai.Handler.Warp.Settings.defaultSettings10
+                                 `cast`
+                               (<(forall a. GHC.Types.IO a -> GHC.Types.IO a)
+                                 -> GHC.Types.IO ()>_R
+                                ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                               GHC.Types.False
+                               Network.Wai.Handler.Warp.Settings.defaultSettings9
+                                 `cast`
+                               (<GHC.Types.IO ()>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                               Network.Wai.Handler.Warp.Settings.defaultSettings6
+                               Network.Wai.Handler.Warp.Settings.defaultSettings4
+                               Network.Wai.Handler.Warp.Settings.ProxyProtocolNone
+                               Network.Wai.Handler.Warp.Settings.defaultSettings3
+                               GHC.Types.True
+                               Network.Wai.Handler.Warp.Settings.defaultSettings2
+                                 `cast`
+                               (<Network.Wai.Internal.Request>_R
+                                ->_R <Network.HTTP.Types.Status.Status>_R
+                                ->_R <GHC.Base.Maybe GHC.Integer.Type.Integer>_R
+                                ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                               Network.Wai.Handler.Warp.Settings.defaultSettings1
+                                 `cast`
+                               (<Network.Wai.Internal.Request>_R
+                                ->_R <Data.ByteString.Internal.ByteString>_R
+                                ->_R <GHC.Integer.Type.Integer>_R
+                                ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                               (GHC.Base.Nothing @ GHC.Types.Int)))
+                         (GHC.Base.id @ (GHC.Types.IO Network.Wai.Internal.Response))
+                         Main.main3
+                           `cast`
+                         ((<Web.Scotty.Internal.Types.ScottyState
+                              Data.Text.Internal.Lazy.Text GHC.Types.IO>_R
+                           ->_R Sym (Data.Functor.Identity.N:Identity[0]
+                                         <((),
+                                           Web.Scotty.Internal.Types.ScottyState
+                                             Data.Text.Internal.Lazy.Text
+                                             GHC.Types.IO)>_R)) ; (Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                                                                            <Web.Scotty.Internal.Types.ScottyState
+                                                                               Data.Text.Internal.Lazy.Text
+                                                                               GHC.Types.IO>_N
+                                                                            <Data.Functor.Identity.Identity>_R
+                                                                            <()>_N) ; Sym (Web.Scotty.Internal.Types.N:ScottyT[0]
+                                                                                               <Data.Text.Internal.Lazy.Text>_N
+                                                                                               <GHC.Types.IO>_N) <()>_N)))
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        ipv4 } } } }) -}
+ab55b3d623c53128fe8874d968e177e9
+  main20 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("PORT"#) -}
+7b81340cb78e1a35c79097e254227bbf
+  main21 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main22) -}
+ed6367c3ac97350891ce854093a90732
+  main22 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("Starting server ..."#) -}
-110739025a20e60bcd0d1b96211cbe66
-  main5 ::
+e32e5a9335d7c83831655c064126167b
+  main23 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1,
      Unfolding: (GHC.TopHandler.runMainIO1
                    @ ()
                    Main.main2 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
-be2c4c5fabeb7b1589f7a77a211a50ea
-  main6 ::
+830f09eafdbe364408a8388a476a9999
+  main24 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
                  case GHC.IO.Handle.Text.hPutStr2
                         GHC.IO.Handle.FD.stdout
-                        Main.main26
+                        Main.main43
                         GHC.Types.True
                         s of ds1 { (#,#) ipv ipv1 ->
                  case GHC.IO.Handle.Text.hPutStr2
                         GHC.IO.Handle.FD.stdout
-                        Main.main22
+                        Main.main39
                         GHC.Types.True
                         ipv of ds2 { (#,#) ipv2 ipv3 ->
                  case GHC.IO.Handle.Text.hPutStr2
                         GHC.IO.Handle.FD.stdout
-                        Main.main20
+                        Main.main37
                         GHC.Types.True
                         ipv2 of ds3 { (#,#) ipv4 ipv5 ->
-                 case Main.main17 ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                 case Main.main34 ipv4 of ds4 { (#,#) ipv6 ipv7 ->
                  GHC.IO.Handle.Text.hPutStr2
                    GHC.IO.Handle.FD.stdout
-                   Main.main7
+                   Main.main25
                    GHC.Types.True
                    ipv6 } } } }) -}
-a2d73137ce3e24b919c13863c7eeabc7
-  main7 :: [GHC.Types.Char]
+65e3da6e749011360a77503a9f760a3d
+  main25 :: [GHC.Types.Char]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ GHC.Types.Char
                    GHC.Show.$fShow(,)3
-                   Main.main8) -}
-46b9fd3edc9770a6742123d3dcd37c52
-  main8 :: GHC.Base.String
+                   Main.main26) -}
+16ca3731413b3de6d46651259b7ffec6
+  main26 :: GHC.Base.String
   {- Unfolding: (GHC.Show.showLitString
                    (Data.ByteString.Lazy.Internal.unpackChars
                       (Data.ByteString.Builder.toLazyByteString
-                         Main.main9
+                         Main.main27
                            `cast`
                          ((forall (r :: <*>_N).
                            <Data.ByteString.Builder.Internal.BuildStep r>_R
@@ -427,8 +2145,8 @@ a2d73137ce3e24b919c13863c7eeabc7
                                          <Data.ByteString.Builder.Internal.BuildSignal
                                             r>_R)) ; Sym (Data.ByteString.Builder.Internal.N:Builder[0]))))
                    Data.ByteString.Lazy.Internal.$fShowByteString2) -}
-5aa24e90f1485c3f3b0e3a62ac37438e
-  main9 ::
+1f6289f723ed21b2a9e5509d538a7f06
+  main27 ::
     Data.ByteString.Builder.Internal.BuildStep r
     -> Data.ByteString.Builder.Internal.BufferRange
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -450,10 +2168,10 @@ a2d73137ce3e24b919c13863c7eeabc7
                    = Data.Aeson.Encoding.Internal.closeBracket1 @ r x
                  } in
                  let {
-                   lvl :: Data.ByteString.Builder.Internal.BufferRange
-                          -> GHC.Prim.State# GHC.Prim.RealWorld
-                          -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-                                Data.ByteString.Builder.Internal.BuildSignal r #)
+                   lvl20 :: Data.ByteString.Builder.Internal.BufferRange
+                            -> GHC.Prim.State# GHC.Prim.RealWorld
+                            -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                  Data.ByteString.Builder.Internal.BuildSignal r #)
                      {- Arity: 2, Strictness: <S(SL),1*U(U,U)><S,U> -}
                    = \ (ds :: Data.ByteString.Builder.Internal.BufferRange)
                        (eta2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
@@ -466,8 +2184,8 @@ a2d73137ce3e24b919c13863c7eeabc7
                             1#
                             dt
                             eta2 of wild1 { (#,#) ds7 ds8 ->
-                     Main.main16
-                       Main.main10
+                     Main.main33
+                       Main.main28
                        @ r
                        x1
                          `cast`
@@ -500,8 +2218,8 @@ a2d73137ce3e24b919c13863c7eeabc7
                                   1#
                                   ww4
                                   s2 of wild { (#,#) ds7 ds8 ->
-                           Main.main16
-                             Main.main10
+                           Main.main33
+                             Main.main28
                              @ r
                              x1
                                `cast`
@@ -516,7 +2234,7 @@ a2d73137ce3e24b919c13863c7eeabc7
                                 @ r
                                 20#
                                 ww4
-                                lvl
+                                lvl20
                                   `cast`
                                 (<Data.ByteString.Builder.Internal.BufferRange>_R
                                  ->_R Sym (GHC.Types.N:IO[0]
@@ -552,8 +2270,8 @@ a2d73137ce3e24b919c13863c7eeabc7
                                         1#
                                         ww4
                                         s2 of wild1 { (#,#) ds7 ds8 ->
-                                 Main.main16
-                                   Main.main10
+                                 Main.main33
+                                   Main.main28
                                    @ r
                                    x1
                                      `cast`
@@ -569,7 +2287,7 @@ a2d73137ce3e24b919c13863c7eeabc7
                                       @ r
                                       20#
                                       ww4
-                                      lvl
+                                      lvl20
                                         `cast`
                                       (<Data.ByteString.Builder.Internal.BufferRange>_R
                                        ->_R Sym (GHC.Types.N:IO[0]
@@ -580,6 +2298,277 @@ a2d73137ce3e24b919c13863c7eeabc7
                             ->_R Sym (GHC.Types.N:IO[0]
                                           <Data.ByteString.Builder.Internal.BuildSignal
                                              r>_R)) #) } }) -}
+2c5b4b06084a0631c569231bd8f4e76d
+  main28 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.: @ GHC.Types.Int Main.jenny3 Main.main29) -}
+25156d51db245c7b017e2de6849e872d
+  main29 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.: @ GHC.Types.Int Main.main32 Main.main30) -}
+e76710f08f11f957b862421683e53bd8
+  main3 ::
+    Web.Scotty.Internal.Types.ScottyState
+      Data.Text.Internal.Lazy.Text GHC.Types.IO
+    -> ((),
+        Web.Scotty.Internal.Types.ScottyState
+          Data.Text.Internal.Lazy.Text GHC.Types.IO)
+  {- Arity: 1, Strictness: <L,1*U(U,U,U)>m,
+     Unfolding: (\ (s1 :: Web.Scotty.Internal.Types.ScottyState
+                            Data.Text.Internal.Lazy.Text GHC.Types.IO)[OneShot] ->
+                 (GHC.Tuple.(),
+                  case s1 of wild { Web.Scotty.Internal.Types.ScottyState ds ds1 ds2 ->
+                  Web.Scotty.Internal.Types.ScottyState
+                    @ Data.Text.Internal.Lazy.Text
+                    @ GHC.Types.IO
+                    ds
+                    (GHC.Types.:
+                       @ (Web.Scotty.Internal.Types.Middleware GHC.Types.IO)
+                       (Web.Scotty.Route.route
+                          @ Data.Text.Internal.Lazy.Text
+                          @ GHC.Types.IO
+                          Web.Scotty.Internal.Types.$fScottyErrorText
+                          Control.Monad.IO.Class.$fMonadIOIO
+                          ds2
+                          Web.Scotty.get2
+                          Main.main15
+                          Main.main12
+                            `cast`
+                          (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                    <*>_N
+                                    <Web.Scotty.Internal.Types.ActionEnv>_R
+                                    <Control.Monad.Trans.State.Lazy.StateT
+                                       Web.Scotty.Internal.Types.ScottyResponse GHC.Types.IO>_R
+                                    <Data.Either.Either
+                                       (Web.Scotty.Internal.Types.ActionError
+                                          Data.Text.Internal.Lazy.Text)
+                                       ()>_N) ; (Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                          <Web.Scotty.Internal.Types.ActionError
+                                                             Data.Text.Internal.Lazy.Text>_N
+                                                          <Control.Monad.Trans.Reader.ReaderT
+                                                             Web.Scotty.Internal.Types.ActionEnv
+                                                             (Control.Monad.Trans.State.Lazy.StateT
+                                                                Web.Scotty.Internal.Types.ScottyResponse
+                                                                GHC.Types.IO)>_R
+                                                          <()>_N) ; Sym (Web.Scotty.Internal.Types.N:ActionT[0]
+                                                                             <Data.Text.Internal.Lazy.Text>_N
+                                                                             <GHC.Types.IO>_R) <()>_N)))
+                       (GHC.Types.:
+                          @ (Web.Scotty.Internal.Types.Middleware GHC.Types.IO)
+                          (Web.Scotty.Route.route
+                             @ Data.Text.Internal.Lazy.Text
+                             @ GHC.Types.IO
+                             Web.Scotty.Internal.Types.$fScottyErrorText
+                             Control.Monad.IO.Class.$fMonadIOIO
+                             ds2
+                             Web.Scotty.get2
+                             Main.main9
+                             Main.main8)
+                          (GHC.Types.:
+                             @ (Web.Scotty.Internal.Types.Middleware GHC.Types.IO)
+                             (Web.Scotty.Route.route
+                                @ Data.Text.Internal.Lazy.Text
+                                @ GHC.Types.IO
+                                Web.Scotty.Internal.Types.$fScottyErrorText
+                                Control.Monad.IO.Class.$fMonadIOIO
+                                ds2
+                                Web.Scotty.get2
+                                Main.main5
+                                Main.main4
+                                  `cast`
+                                (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                          <*>_N
+                                          <Web.Scotty.Internal.Types.ActionEnv>_R
+                                          <Control.Monad.Trans.State.Lazy.StateT
+                                             Web.Scotty.Internal.Types.ScottyResponse
+                                             GHC.Types.IO>_R
+                                          <Data.Either.Either
+                                             (Web.Scotty.Internal.Types.ActionError
+                                                Data.Text.Internal.Lazy.Text)
+                                             ()>_N) ; (Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                                <Web.Scotty.Internal.Types.ActionError
+                                                                   Data.Text.Internal.Lazy.Text>_N
+                                                                <Control.Monad.Trans.Reader.ReaderT
+                                                                   Web.Scotty.Internal.Types.ActionEnv
+                                                                   (Control.Monad.Trans.State.Lazy.StateT
+                                                                      Web.Scotty.Internal.Types.ScottyResponse
+                                                                      GHC.Types.IO)>_R
+                                                                <()>_N) ; Sym (Web.Scotty.Internal.Types.N:ActionT[0]
+                                                                                   <Data.Text.Internal.Lazy.Text>_N
+                                                                                   <GHC.Types.IO>_R) <()>_N)))
+                             ds1)))
+                    ds2 })) -}
+98e45e4b872a9b4f0854fbb43518b40e
+  main30 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Main.main31
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+69528d9537b6eb35939ba6994c35fd83
+  main31 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 4#) -}
+fc15a605f51c42bf59bd6d800d86ecd2
+  main32 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3#) -}
+d0adbc72b941c7eb362540affaade5d0
+  main33 ::
+    [GHC.Types.Int]
+    -> forall r.
+       Data.ByteString.Builder.Internal.BuildStep r
+       -> Data.ByteString.Builder.Internal.BufferRange
+       -> GHC.Prim.State# GHC.Prim.RealWorld
+       -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+             Data.ByteString.Builder.Internal.BuildSignal r #)
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,1*U><L,C(C1(U(U,U)))><L,U(U,U)><S,U> -}
+0b7871650561664442e5fe3b052da01d
+  main34 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.IO.Handle.FD.openFile1
+                        Main.main35
+                        GHC.IO.IOMode.ReadMode
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv1
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   ipv3
+                   GHC.Types.True
+                   ipv2 } }) -}
+106e5f407054443dcc857bef419b1244
+  main35 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main36) -}
+a78fb7f0fcafa9fbc6891d0aa40117ee
+  main36 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("stack.yaml"#) -}
+4e96ffd0930c5735fa19138d4189cd3d
+  main37 :: GHC.Base.String
+  {- Unfolding: (case GHC.Show.$w$cshowsPrec4
+                        0#
+                        Main.main38
+                        (GHC.Types.[] @ GHC.Types.Char) of ww2 { (#,#) ww3 ww4 ->
+                 GHC.Types.: @ GHC.Types.Char ww3 ww4 }) -}
+249ac207d4d1e1dc227c4cb00074e7cf
+  main38 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (7) -}
+4c2dbd9d2135fa3dd812de012d21aad3
+  main39 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   Main.greet2
+                   Main.main40) -}
+307e6d113683231c75b1be580fddcfd4
+  main4 ::
+    Web.Scotty.Internal.Types.ActionEnv
+    -> Control.Monad.Trans.State.Lazy.StateT
+         Web.Scotty.Internal.Types.ScottyResponse
+         GHC.Types.IO
+         (Data.Either.Either
+            (Web.Scotty.Internal.Types.ActionError
+               Data.Text.Internal.Lazy.Text)
+            ())
+  {- Arity: 1, Strictness: <L,U> -}
+c25971dbe3929bca1ecd19067efcd115
+  main40 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   (GHC.CString.unpackCString# Main.main42)
+                   Main.main41) -}
+50ed9e58821ff4533752f2fa0ec6a5ae
+  main41 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.greet1) -}
+4b2fa3ca40afa8693ec5d179cab7b340
+  main42 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("world"#) -}
+e06235ff254f764327e6c6ded41da36c
+  main43 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   Main.greet2
+                   Main.main44) -}
+df6741099b9e95223940445e245db6a7
+  main44 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   (GHC.CString.unpackCString# Main.main45)
+                   Main.main41) -}
+e7e5dacfa34f595fe58739dd399736c6
+  main45 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("oscar"#) -}
+c5b4bb176ea19831a08214e07ed3fdde
+  main46 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case (Foreign.Marshal.Alloc.allocaBytesAligned
+                         @ Foreign.C.Types.CInt
+                         @ [GHC.Base.String]
+                         Foreign.Storable.$fStorableBool7
+                         Foreign.Storable.$fStorableBool7
+                         System.Environment.getArgs1
+                           `cast`
+                         (<GHC.Ptr.Ptr Foreign.C.Types.CInt>_R
+                          ->_R Sym (GHC.Types.N:IO[0] <[GHC.Base.String]>_R)))
+                        `cast`
+                      (GHC.Types.N:IO[0] <[GHC.Base.String]>_R)
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case Main.main47 ipv1 ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   (GHC.List.$w!! @ GHC.Base.String ipv3 0#)
+                   GHC.Types.True
+                   ipv2 } }) -}
+e99c44a27b5bc7050d651b6eea6fd462
+  main47 ::
+    [GHC.IO.FilePath]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Base.String] #)
+  {- Arity: 2, Strictness: <S,1*U><S,U> -}
+cc5eaed2b51fd32bf0dbef657ced7e27
+  main5 :: Web.Scotty.Internal.Types.RoutePattern
+  {- Strictness: m1,
+     Unfolding: (Web.Scotty.Internal.Types.Capture Main.main6) -}
+6eb8d495b27855f3559de9f3f7d7c303
+  main6 :: Data.Text.Internal.Lazy.Text
+  {- Unfolding: (case GHC.Base.map
+                        @ GHC.Types.Char
+                        @ GHC.Types.Char
+                        Data.Text.Internal.safe
+                        (GHC.CString.unpackCString# Main.main7) of dt { DEFAULT ->
+                 Web.Scotty.Internal.Types.$fIsStringRoutePattern_outer dt }) -}
+54fe8150ed1fbfcbeecef8d19fd78b09
+  main7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("/hello/:name"#) -}
+8e0ad6b25a4571cef38408e94b83c172
+  main8 ::
+    Web.Scotty.Internal.Types.ActionT
+      Data.Text.Internal.Lazy.Text GHC.Types.IO ()
+  {- Unfolding: (Web.Scotty.Action.$wjson
+                   @ [Main.User]
+                   @ Data.Text.Internal.Lazy.Text
+                   @ GHC.Types.IO
+                   Main.$s$fToJSON[]
+                   GHC.Base.$fMonadIO
+                   Main.allUsers) -}
+178076bfca89398e02b23111e9fdb303
+  main9 :: Web.Scotty.Internal.Types.RoutePattern
+  {- Strictness: m1,
+     Unfolding: (Web.Scotty.Internal.Types.Capture Main.main10) -}
+adbde36286b612d1a0af38f01ef72f5f
+  main_name :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.main20) -}
+1237e94e3f255ca469be8019f6c57508
+  matchesId :: GHC.Types.Int -> Main.User -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S),1*U(U)><S(S(S)L),1*U(1*U(U),A)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (id :: GHC.Types.Int) (user :: Main.User) ->
+                 case user of wild { Main.User ds ds1 ->
+                 GHC.Classes.eqInt ds id }) -}
 78868cdc53ed4b0abf524b49354dfc6a
   maybeMonad :: GHC.Base.Maybe GHC.Types.Int
   {- HasNoCafRefs, Strictness: m2,
@@ -587,34 +2576,28 @@ a2d73137ce3e24b919c13863c7eeabc7
 316e4efecaa4d10ac9798b6dfaf5ea6a
   maybeMonad1 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 6#) -}
-18b376ca3671769300e4e80acf30c3b9
+04951d6dc1ae2bff43faec3fb22284b8
   numbers :: [GHC.Types.Int]
   {- HasNoCafRefs, Strictness: m2,
-     Unfolding: (GHC.Types.:
-                   @ GHC.Types.Int
-                   Main.numbers1
-                   Main.main10) -}
-1d4b82997d48bbb0382b22e0da3ea3fb
-  numbers1 :: GHC.Types.Int
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
-780ebcf9378894772556b25ed5781c74
+     Unfolding: (GHC.Types.: @ GHC.Types.Int Main.bob3 Main.main28) -}
+3552f7c949260cb7bf965f1f837ee00d
   printConfig :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
-                Main.main17 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-1082d5b41b2561f386225d43e5b48d7f
+                Main.main34 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+0ae3184564e99ee390981a41a7ad46bd
   printNumbers :: GHC.Types.IO ()
   {- Arity: 1,
      Unfolding: InlineRule (0, True, True)
                 Main.printNumbers1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-7a59c93b0bbb7b014e75c9b8410b12d7
+c3531140f558efa09b148416003eb16c
   printNumbers1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1,
      Unfolding: (GHC.IO.Handle.Text.hPutStr2
                    GHC.IO.Handle.FD.stdout
-                   Main.main20
+                   Main.main37
                    GHC.Types.True) -}
 e5190b683aa1ba79152a0c94128ddb61
   printTime :: GHC.Types.IO ()
@@ -635,6 +2618,73 @@ c45c236d32bf9dc52da79e9e96f6c5ad
                    (Data.Time.LocalTime.Internal.ZonedTime.$fShowUTCTime_$cshow ipv1)
                    GHC.Types.True
                    ipv }) -}
+e082c4be356293409e1386f80b501131
+  userId :: Main.User -> GHC.Types.Int
+  RecSel Left Main.User
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U(U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.User) ->
+                 case ds of wild { Main.User ds1 ds2 -> ds1 }) -}
+e082c4be356293409e1386f80b501131
+  userName :: Main.User -> GHC.Base.String
+  RecSel Left Main.User
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.User) ->
+                 case ds of wild { Main.User ds1 ds2 -> ds2 }) -}
+instance Data.Aeson.Types.FromJSON.FromJSON [Main.User]
+  = Main.$fFromJSONUser
+instance GHC.Generics.Generic [Main.User] = Main.$fGenericUser
+instance GHC.Show.Show [Main.User] = Main.$fShowUser
+instance Data.Aeson.Types.ToJSON.ToJSON [Main.User]
+  = Main.$fToJSONUser
+family instance GHC.Generics.Rep [Main.User] = Main.Rep_User
+"SPEC/Main $fFromJSON[] @ Char" [orphan] forall (v :: Data.Aeson.Types.FromJSON.FromJSON
+                                                        GHC.Types.Char)
+  Data.Aeson.Types.FromJSON.$fFromJSON[] @ GHC.Types.Char v
+  = Main.$fFromJSONUser_$s$fFromJSON[]
+"SPEC/Main $fSelectorMetaMetaSel @ ('Just
+                                     "userId") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [orphan] forall (v3 :: GHC.Generics.SingI
+                                                                                                                                                                                'GHC.Generics.DecidedLazy)
+                                                                                                                                                                       (v2 :: GHC.Generics.SingI
+                                                                                                                                                                                'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                       (v1 :: GHC.Generics.SingI
+                                                                                                                                                                                'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                       (v :: GHC.Generics.SingI
+                                                                                                                                                                               ('GHC.Base.Just
+                                                                                                                                                                                  "userId"))
+  GHC.Generics.$fSelectorMetaMetaSel @ ('GHC.Base.Just "userId")
+                                     @ 'GHC.Generics.NoSourceUnpackedness
+                                     @ 'GHC.Generics.NoSourceStrictness
+                                     @ 'GHC.Generics.DecidedLazy
+                                     v
+                                     v1
+                                     v2
+                                     v3
+  = Main.$fFromJSONUser_$s$fSelectorMetaMetaSel1
+"SPEC/Main $fSelectorMetaMetaSel @ ('Just
+                                     "userName") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [orphan] forall (v3 :: GHC.Generics.SingI
+                                                                                                                                                                                  'GHC.Generics.DecidedLazy)
+                                                                                                                                                                         (v2 :: GHC.Generics.SingI
+                                                                                                                                                                                  'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                         (v1 :: GHC.Generics.SingI
+                                                                                                                                                                                  'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                         (v :: GHC.Generics.SingI
+                                                                                                                                                                                 ('GHC.Base.Just
+                                                                                                                                                                                    "userName"))
+  GHC.Generics.$fSelectorMetaMetaSel @ ('GHC.Base.Just "userName")
+                                     @ 'GHC.Generics.NoSourceUnpackedness
+                                     @ 'GHC.Generics.NoSourceStrictness
+                                     @ 'GHC.Generics.DecidedLazy
+                                     v
+                                     v1
+                                     v2
+                                     v3
+  = Main.$fFromJSONUser_$s$fSelectorMetaMetaSel
+"SPEC/Main $fToJSON[] @ User" forall (v :: Data.Aeson.Types.ToJSON.ToJSON
+                                             Main.User)
+  Data.Aeson.Types.ToJSON.$fToJSON[] @ Main.User v
+  = Main.$s$fToJSON[]
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:
